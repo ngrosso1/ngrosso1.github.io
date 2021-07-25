@@ -1,0 +1,157 @@
+<!-- DOCTYPE html -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nicholas J. Grosso Website</title>
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awsome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                 <!-- <img src="images/face.jpg" alt=""> -->
+            </div>
+            <button class="nav-toggle" area-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#home" class="nav_link">Home</a></li>
+                    <li class="nav_item"><a href="#projects" class="nav_link">My Projects</a></li>
+                    <li class="nav_item"><a href="#about" class="nav_link">About me</a></li>
+                    <li class="nav_item"><a href="#skills" class="nav_link">My Skills</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- INTRO -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hello, my name is <strong>Nicholas J. Grosso</strong>
+            </h1>
+            <img src="images/face.jpg" alt="face">
+        </section>
+
+        <!-- My Projects -->
+        <section class="my_projects" id="projects">
+            <h2 class="section_title section__title--projects">What I have programmed</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="images/c4.gif" alt="" class="project__img">
+                    <h3>Connect-4 Algorithm</h3>
+                    <p>Coded the popular board game connect-4 in Python with a GUI interface. You can choose to rotate
+                    between two in-person human players or face off against an Algorithm. </p>
+                </div> <!-- END OF PROJECT1 -->
+
+                <div class="project">
+                    <img src="images/xv6.png" alt="" class="project__img">
+                    <h3>XV6 MLFQ Addition</h3>
+                    <p>Modified the original base code of the XV6 operating system to utalize an 
+                    MLFQ (Multilevel feedback queue). This would give priority to a process that had been
+                    starved. The first queue (lowest priority) will promote a process to the second queue
+                    if its wait time in the queue exceeds 1 second. In the second queue (highest priority)
+                    the default RR (round robin) scheduling is utalized.</p>
+                </div> <!-- END OF PROJECT1 -->
+
+                <div class="project">
+                    <img src="images/alg.gif" alt="" class="project__img">
+                    <h3>Path Finding Algorithm</h3>
+                    <p>Remotly worked in a group of 3 to test the difference between the path finding algorithms
+                    A* and Dijkstra. Written in C++ we utalized random graphs to show that A* is a improvment to 
+                    Dijkstra's algorithm.</p>
+                </div> <!-- END OF PROJECT1 -->
+            </div> <!-- END OF ALL PROJECTS -->
+            <a href="#work" class"btn">My Projects</a>
+        </section>
+
+        <!-- ABOUT ME -->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">Who I am</h2>
+            <div class="about-me__body">
+                <p>
+                    I am a senior undergraduate majoring in Computer Science (Bachelor Science) at Binghamton University. 
+                    Currently, I am interning at EsurgiBiotech as a Software Engineer. Languages I have experience with are 
+                    C/C++, Python, Javascript, HTML, CSS, Java, Go, R, Swift, and more. 
+                </p>
+                <p>
+                    When I am not working on projects or studying, I like to lift weights, play video games, and watch movies/anime.
+                </p>
+            </div>
+
+            <!-- <img src="images/face.jpg" alt="Picture of Nicholas J. Grosso"> -->
+        </section>
+
+        <!-- MY SKILLS -->
+        <section class="my-skills" id="skills">
+            <h2 class="section__title">My skills</h2>
+            <p class="section__subtitle"></p>
+            <div class="portfolio">
+                <!-- SKILL 1 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/js-block.png" alt="" class="portfolio__img">
+                </a>
+                <!-- SKILL 2 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/html.png" alt="" class="portfolio__img">
+                </a>
+                <!-- SKILL 3 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/css.png" alt="" class="portfolio__img">
+                </a>
+                <!-- SKILL 4 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/nodejs.png" alt="" class="portfolio__img">
+                </a>
+                <!-- SKILL 5 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/mongodb.png" alt="" class="portfolio__img">
+                </a>
+                <!-- SKILL 6 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/AWS.png" alt="" class="portfolio__img">
+                </a>
+                <!-- SKILL 7 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/git.png" alt="" class="portfolio__img">
+                </a>
+                <!-- SKILL 8 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/github.png" alt="" class="portfolio__img">
+                </a>
+                <!-- SKILL 9 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/r-lang-logo.png" alt="" class="portfolio__img">
+                </a>
+                <!-- SKILL 10 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/arch.png" alt="" class="portfolio__img">
+                </a>
+                <!-- SKILL 11 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/c-logo.png" alt="" class="portfolio__img">
+                </a>
+                <!-- SKILL 12 -->
+                <a href="#" class="portfolio__item">
+                    <img src="images/r-lang-logo.png" alt="" class="portfolio__img">
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <a href="mailto:nicholasj.grosso@gmail.com" class="footer-link">nicholasj.grosso@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item"><a class="social-list__link"
+                href="https://www.github.com/ngrosso1">Github</a></li>
+                <li class="social-list__item"><a class="social-list__link"
+                href="https://www.linkedin.com/in/nicholasjgrosso/">LinkedIn</a></li>
+            </ul>"
+        </footer>
+    </body>
+</html>
