@@ -11,14 +11,17 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #fff;
-    --clr-dark: #ffffff;
-    /* --clr-accent: #16e0bd; */
+    --clr-light: #9e8d6a;
+    --clr-dark: #303030;
+    --clr-accent: #00ffd5;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 
+          0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
 
 @media (min-width: 800px){
@@ -31,9 +34,10 @@
 }
 
 body {
-    background: url('../images/blur.png') no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
+    /* background: url('../images/blur.png') no-repeat center center fixed; */
+    background: rgb(255, 255, 255);
+    /* background-size: cover; */
+    /* height: 100%; */
     color: var(--clr-dark);
     margin: 0;
     font-family: var(--ff-primary);
@@ -42,7 +46,7 @@ body {
 }
 
 section {
-    padding: 3em 25em;
+    padding: 5em 2em;
 }
 
 img {
@@ -60,8 +64,8 @@ h3 {
 }
 
 h1 { font-size: var(--fs-h1) }
-h2 { font-size: var(--fs-h1) }
-h3 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
 
 .section__title {
     margin-bottom: .25em;
@@ -81,16 +85,50 @@ h3 { font-size: var(--fs-h1) }
 
 }
 
-/*
 .section__subtitle--intro,
 .section__subtitle--about {
     background: var(--clr-accent);
+    padding: .25em 1em;
     font-family: var(--ff-secondary);
+    margin-bottom: 1em;
 }
-*/
 
 nav { display: none; }
 
 .intro {
     position: relative;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px){
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "img titel"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
 }
