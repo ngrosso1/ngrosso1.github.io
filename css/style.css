@@ -194,7 +194,19 @@ nav { display: none; }
     margin: 0 auto;
 }
 
-@media(min-width: 800px) {
+.project__img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1)
+        opacity 250ms linear;
+}
+
+.project__img:hover {
+    opacity: .5;
+    background: var(--clr-accent);
+    overflow: hidden;
+}
+
+@media(min-width: 900px) {
     .project {
         display: block;
         max-width: 1000px;
@@ -217,4 +229,57 @@ nav { display: none; }
 .about-me {
     max-width: 10000px;
     margin: 0 auto;
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px){
+    .about-me{
+        display: grid;
+        grid-template-columns:  1fr 200px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+
+    .section__subtitle--about {
+        grid-column: 1;
+    }
+
+    .section__subtitle--about{
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1e m;
+        padding-right: calc(200px + 4em);
+    }
+
+    .about-me__img{
+        grid-area: img;
+        position: relative;
+    }
+}
+
+.my-skills {
+    background-color: rgb(49, 82, 52);
+    color: var(--clr-light);
+     text-align: center ;
+}
+
+.section__subtitle--skill{
+     color: var(--clr-accent);
+     font-weight: var(--fw-bold);
+     margin-bottom: 1em;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 0 auto;
 }
