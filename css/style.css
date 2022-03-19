@@ -21,7 +21,7 @@
     --fs-body: 1rem;
 
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 
-          0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+    0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
 
 @media (min-width: 800px){
@@ -373,13 +373,13 @@ header {
 .my-skills {
     background-color: rgb(49, 82, 52);
     color: var(--clr-light);
-     text-align: center ;
+    text-align: center ;
 }
 
 .section__subtitle--skill{
-     color: var(--clr-accent);
-     font-weight: var(--fw-bold);
-     margin-bottom: 1em;
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1em;
 }
 
 .portfolio {
@@ -416,7 +416,6 @@ header {
 
 .social-list {
     list-style: none;
-    
     justify-content: center;
     margin: 2em 0;
     padding:  0;
