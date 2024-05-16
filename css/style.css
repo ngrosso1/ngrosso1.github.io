@@ -443,6 +443,14 @@ new code */
     background: #000; /* or any other background color */
     color: #00ffff; /* or any other text color */
     padding: 20px; /* Adjust as needed */
+    display: flex;
+    justify-content: center; /* Center the footer container */
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left within the container */
 }
 
 .social-list {
@@ -455,7 +463,6 @@ new code */
     display: flex;
     align-items: center;
     margin-bottom: 10px; /* Adjust spacing between items */
-    justify-content: flex-start; /* Align items to the left */
 }
 
 .social-list__item i {
