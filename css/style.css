@@ -455,6 +455,7 @@ new code */
     display: flex;
     align-items: center;
     margin-bottom: 10px; /* Adjust spacing between items */
+    justify-content: flex-start; /* Align items to the left */
 }
 
 .social-list__item i {
@@ -469,3 +470,4 @@ new code */
 .footer-link:hover, .social-list__link:hover {
     text-decoration: underline; /* Add underline on hover */
 }
+
