@@ -436,3 +436,36 @@ header {
     margin: 2em 0;
     padding:  0;
 }
+
+/*
+new code */
+.footer {
+    background: #000; /* or any other background color */
+    color: #00ffff; /* or any other text color */
+    padding: 20px; /* Adjust as needed */
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-list__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust spacing between items */
+}
+
+.social-list__item i {
+    margin-right: 10px; /* Adjust spacing between icon and text */
+}
+
+.footer-link, .social-list__link {
+    color: #00ffff; /* Same text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-link:hover, .social-list__link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
