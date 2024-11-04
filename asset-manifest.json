@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.afd0d7f3.css",
+    "main.js": "/static/js/main.f0eff5f4.js",
+    "static/js/453.d73b0aaa.chunk.js": "/static/js/453.d73b0aaa.chunk.js",
+    "static/media/wordleclone.gif": "/static/media/wordleclone.9853c860bf3bfb48c85f.gif",
+    "static/media/c4.gif": "/static/media/c4.2a6a19f88b7f57e2a976.gif",
+    "static/media/grosso.png": "/static/media/grosso.50e877954e5e4d6f2f87.png",
+    "static/media/esurgi.png": "/static/media/esurgi.22101d1d8fd7ca456919.png",
+    "static/media/binghamton.png": "/static/media/binghamton.bda411928e4684107315.png",
+    "static/media/atnt.png": "/static/media/atnt.5565274bc8284434940b.png",
+    "index.html": "/index.html",
+    "main.afd0d7f3.css.map": "/static/css/main.afd0d7f3.css.map",
+    "main.f0eff5f4.js.map": "/static/js/main.f0eff5f4.js.map",
+    "453.d73b0aaa.chunk.js.map": "/static/js/453.d73b0aaa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afd0d7f3.css",
+    "static/js/main.f0eff5f4.js"
+  ]
+}
