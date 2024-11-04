@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  min-height: 100vh; /* Full viewport height */
+  padding-top: 80px; /* Allow space for the header */
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -80,6 +84,9 @@ html, body, #root, .App {
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 14px; /* Adjust font size */
+    .App {
+      padding-top: 100px; /* Additional top space on mobile */
+    }
   }
 
   /* Navigation adjustments */

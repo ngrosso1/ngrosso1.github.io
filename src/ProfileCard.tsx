@@ -14,7 +14,7 @@ const ProfileCard: React.FC = () => {
         <div className="text-info">
           <h1 className="nameHeader"> Nicholas J. Grosso</h1>
           <p className="subtitle">
-            {new Date().getFullYear() - NICK_BIRTH_YEAR}-year-old software engineer working at Lumen Technologies
+            {new Date().getFullYear() - NICK_BIRTH_YEAR}-year-old software engineer from Raleigh, NC
           </p>
           <div className="social-icons">
           <a href="https://drive.google.com/file/d/1zGm5kLi2yl-xGiFvxRl84V-4dyvyaO0a/view" target="_blank" rel="noopener noreferrer">
