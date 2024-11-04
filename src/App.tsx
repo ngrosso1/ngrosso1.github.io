@@ -6,6 +6,7 @@ import ExperienceTabs from './ExperienceTabs';
 import Header from './header';
 import FeaturedProjects from './FeaturedProjects'; // Fixed typo in import
 import About from './About';
+import Contact from './Contact';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <Header />
       <Routes>
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route 
           path="/" 
           element={
