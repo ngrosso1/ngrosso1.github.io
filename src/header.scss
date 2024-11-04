@@ -34,4 +34,9 @@ body {
     color: #9c9c9c; /* Change the color as needed */
     font-weight: bold;
   }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
   
