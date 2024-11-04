@@ -1,10 +1,25 @@
 /* src/about.scss */
 
 .about {
-    max-width: 750px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.014);
-    color: #ffffff; /* Change to match your theme */
-    backdrop-filter: blur(14px);
-  }
+  max-width: 750px;
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.014);
+  color: #ffffff;
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column; /* Allow content to stack vertically */
+  align-items: center; /* Centers content within the container */
+  
+  /* Center the .about container in the viewport */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-content {
+  max-width: 800px;
+  width: 100%; /* Ensures full width on smaller screens */
+  text-align: center; /* Center text if needed */
+}

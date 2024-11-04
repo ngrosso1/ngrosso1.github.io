@@ -4,10 +4,10 @@ import './Contact.scss'; // Ensure this file exists
 const Contact: React.FC = () => {
   return (
     <div className="contact">
-      <h2>Contact Me</h2>
-      <p>Email: example@example.com</p>
-      <p>Phone: (123) 456-7890</p>
-      <p>Address: 123 Main St, Anytown, USA</p>
+      <h2>Contact Info</h2>
+      <p>Email: nicholasj.grosso@gmail.com</p>
+      <p>Phone: (914)-564-6793</p>
+      <p>Address: Raleigh, NC</p>
       {/* Add more contact information as needed */}
     </div>
   );

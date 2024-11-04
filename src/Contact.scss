@@ -1,8 +1,19 @@
 .contact {
+  max-width: 750px;
+  margin: 0 auto; /* Centers the container horizontally */
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.014);
+  color: #ffffff;
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column; /* Allow content to stack vertically */
+  align-items: center; /* Centers content within the container */
+  
+  /* Center the .about container in the viewport */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .contact h2 {
