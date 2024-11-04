@@ -1,0 +1,82 @@
+/* src/ExperienceTabs.scss */
+
+.experience-tabs {
+  max-width: 750px;
+  margin: 20px auto;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between; /* Space buttons evenly */
+  margin-bottom: 3px;
+  max-width: 100%; /* Ensure the tabs do not exceed the width of the container */
+}
+
+.tabs button {
+  flex: 1; /* Make buttons take equal space */
+  padding: 10px 0; /* Adjust padding to center text vertically */
+  font-size: 1em;
+  color: #ffffff;
+  background-color: rgba(26, 26, 26, 0.8); /* Semi-transparent black */
+  border: 1px solid #333333;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  text-align: center; /* Center the text in the button */
+}
+
+.tabs .active {
+  background-color: rgba(51, 51, 51, 0.8); /* Darker background for active state */
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent white */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(8px); /* Support for older browsers */
+  border: 1px solid rgba(51, 51, 51, 0.5); /* Semi-transparent border */
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  backdrop-filter: blur(14px);
+}
+
+.experience-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.experience-item h3 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.experience-item p {
+  margin: 2px 0;
+  color: #c7c7c7;
+}
+
+.experience-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 20px;
+}
+
+.experience-item .desc {
+  color: #ffffff; /* Ensure it's set to white */
+  margin: 0.5rem 0;
+}
+

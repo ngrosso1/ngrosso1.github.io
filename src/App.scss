@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* App.scss or index.scss */
+
+/* App.scss or index.scss */
+
+.App {
+  display: block; /* Remove any flex or grid layout unless necessary */
+  overflow-y: auto; /* Ensure it allows scrolling */
+}
+
+/* Ensure no components are restricting overflow */
+header, .profile-card, .experience-tabs, .featured-projects {
+  overflow: visible;
+  position: relative; /* Avoid fixed positioning if not needed */
+}
+
+
+
+/* background imagine */
+/* index.scss or global CSS file */
+
+body, html {
+  overflow-y: auto !important;
+}
+
+/* index.scss or App.scss */
+
+html, body, #root, .App {
+  min-height: 100vh;
+  margin: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
