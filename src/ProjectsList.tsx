@@ -1,9 +1,9 @@
-// src/FeaturedProjects.tsx
+// src/ProjectsList.tsx
 import React from 'react';
-import './FeaturedProjects.scss';
-import c4 from "./logos/c4.gif"
-import wordle from "./logos/wordleclone.gif"
-import task from "./logos/task.gif"
+import './ProjectsList.scss';
+import c4 from "./logos/c4.gif";
+import wordle from "./logos/wordleclone.gif";
+import task from "./logos/task.gif";
 
 interface Project {
   title: string;
@@ -11,29 +11,31 @@ interface Project {
   imageUrl: string;
   techStack: string[];
   repoLink: string;
+  liveLink?: string; // Optional property for live demo link
 }
 
 const projects: Project[] = [
   {
     title: 'Task Manager',
     description: 'Developed a full-stack task management application using React for frontend and a RESTful API in TypeScript for backend, enabling CRUD operations with seamless integration between client and server',
-    imageUrl: task, // Update with the actual path to your image
-    techStack: ['AWS Lambda', 'REST API', 'React', 'Typescript', 'DynamoDB', ],
+    imageUrl: task,
+    techStack: ['AWS Lambda', 'REST API', 'React', 'Typescript', 'DynamoDB'],
     repoLink: 'https://github.com/ngrosso1/taskManager'
   },
   {
     title: 'Wordle Recreation',
-    description: 'Recreated the popular game wordle using HTML, CSS, and JavaScript.',
-    imageUrl: wordle, // Update with the actual path to your image
-    techStack: ['HTML/CSS', 'Javascript', 'NodeJS'],
-    repoLink: 'https://github.com/ngrosso1/wordle_clone'
+    description: 'Recreated the popular game Wordle using HTML, CSS, and JavaScript.',
+    imageUrl: wordle,
+    techStack: ['HTML/CSS', 'JavaScript', 'NodeJS'],
+    repoLink: 'https://github.com/ngrosso1/wordle_clone',
+    liveLink: 'https://ngrosso1.github.io/wordle_clone/' // Add live link here
   }
 ];
 
-const FeaturedProjects: React.FC = () => {
+const ProjectsList: React.FC = () => {
   return (
-    <section className="featured-projects">
-      <h2>Featured Projects</h2>
+    <section className="ProjectsList">
+      <h2>Projects</h2>
       <div className="projects-container">
         {projects.map((project, index) => (
           <div key={index} className="project-card">
@@ -46,6 +48,9 @@ const FeaturedProjects: React.FC = () => {
               ))}
             </div>
             <a href={project.repoLink} className="repo-link" target="_blank" rel="noopener noreferrer">Source</a>
+            {project.liveLink && (
+              <a href={project.liveLink} className="repo-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            )}
           </div>
         ))}
       </div>
@@ -53,4 +58,4 @@ const FeaturedProjects: React.FC = () => {
   );
 };
 
-export default FeaturedProjects;
+export default ProjectsList; // Ensure this is included

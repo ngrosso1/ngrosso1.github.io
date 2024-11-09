@@ -4,9 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProfileCard from './ProfileCard';
 import ExperienceTabs from './ExperienceTabs';
 import Header from './header';
-import FeaturedProjects from './FeaturedProjects'; // Fixed typo in import
+import FeaturedProjects from './FeaturedProjects';
 import About from './About';
 import Contact from './Contact';
+import ProjectsList from './ProjectsList';
+// Ensure this matches your filename exactly
 
 const App: React.FC = () => {
   return (
@@ -15,6 +17,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<ProjectsList />} /> {/* Link to ProjectsList */}
         <Route 
           path="/" 
           element={
