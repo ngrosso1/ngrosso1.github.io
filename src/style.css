@@ -1,0 +1,31 @@
+/* General body reset */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* --- Header Centering Solution --- */
+
+.site-header {
+    background-color: #fff;
+    padding: 1rem 0; /* Add some vertical padding */
+    border-bottom: 1px solid #ddd;
+
+    /* Use Flexbox for easy centering */
+    display: flex;
+    justify-content: center; /* This is the key for horizontal centering */
+    align-items: center;     /* This helps with vertical alignment if items have different heights */
+}
+
+.logo {
+    display: block; /* Removes extra space below the image */
+    height: 60px;   /* Set a fixed height for your logo */
+    width: auto;    /* Allow width to scale automatically to maintain aspect ratio */
+}
+
+/* --- Main content for demonstration --- */
+main {
+    padding: 2rem;
+    text-align: center;
+}
