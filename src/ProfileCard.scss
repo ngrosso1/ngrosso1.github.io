@@ -10,7 +10,7 @@ body {
 .profile-card {
   max-width: 800px;
   margin: 40px auto 20px auto; /* Increased top margin from 20px to 40px */
-  padding: 20px;
+  padding: 40px;
   box-sizing: border-box;
   
   // Mobile responsiveness
@@ -70,21 +70,23 @@ body {
 
 /* Profile picture styling */
 .profile-picture {
-  width: 200px;
-  height: 214px;
+  width: 220px;
+  //height: 214px;
   border-radius: 0;
-  flex-shrink: 0; // Prevent shrinking
+  object-fit: cover;
+  //flex-shrink: 0; // Prevent shrinking
   order: 2; /* Ensure image appears on the right */
   
   @media (max-width: 768px) {
     width: 120px; /* Smaller on mobile to fit */
-    height: 128px;
+    //height: 128px;
     order: 2; /* Keep on the right */
   }
   
   @media (max-width: 480px) {
-    width: 100px;
-    height: 107px;
+    //width: 100px;
+    //height: 107px;
+    object-fit: cover;
   }
   
   @media (max-width: 320px) {
@@ -139,20 +141,15 @@ h1 {
 
 .social-icons {
   display: flex;
-  gap: 15px;
-  margin-top: 10px;
-  justify-content: flex-start;
-  flex-wrap: wrap; // Allow wrapping if needed
-  
+  gap: 10px;
+  flex-wrap: wrap;
+
   @media (max-width: 768px) {
-    justify-content: flex-start; /* Keep left aligned */
-    gap: 8px; /* Tighter spacing */
-    margin-top: 8px;
+    gap: 8px;
   }
-  
+
   @media (max-width: 480px) {
     gap: 6px;
-    margin-top: 6px;
   }
 }
 
@@ -167,7 +164,7 @@ h1 {
   }
   
   @media (max-width: 480px) {
-    font-size: 1.2em;
+    font-size: 1.8em;
   }
   
   @media (max-width: 320px) {
@@ -192,8 +189,8 @@ h1 {
   font-size: 1em; // Add base font size
   
   @media (max-width: 768px) {
-    padding: 0.4em 1em; /* Smaller button */
-    font-size: 0.8em;
+    //padding: 0.4em 1em; /* Smaller button */
+    //font-size: 0.8em;
     margin-top: 5px;
   }
   
@@ -260,3 +257,21 @@ h1 {
 
 /* Remove conflicting App padding - let App.scss handle this */
 /* Removed the .App rule that was conflicting */
+
+.social-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px; // Adjust spacing between icons and button
+  margin-top: 10px;
+
+  @media (max-width: 768px) {
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 6px;
+    margin-top: 6px;
+  }
+}

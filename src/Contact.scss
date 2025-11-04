@@ -24,4 +24,21 @@
 .contact p {
   font-size: 16px;
   margin: 5px 0;
+  text-align: center;
+  margin-bottom: 1rem; /* Add more space between contact items */
+}
+
+/* Style for the contact label (e.g., "Phone", "Email") */
+.contact-label {
+  display: block; /* Make it a block-level element to force a new line */
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 4px; /* Add some space between the label and the info */
+}
+
+/* Style for the contact info itself */
+.contact-info {
+  display: block; /* Ensure it also behaves as a block if needed */
+  color: #ffffff; /* Ensure link color is white */
+  text-decoration: none; /* Remove underline from email link */
 }
