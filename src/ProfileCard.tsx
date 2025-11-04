@@ -16,8 +16,9 @@ const ProfileCard: React.FC = () => {
           <p className="subtitle">
             {new Date().getFullYear() - NICK_BIRTH_YEAR}-year-old software engineer from Raleigh, NC
           </p>
+          <div className="social-section">
           <div className="social-icons">
-          <a href="https://drive.google.com/file/d/1zGm5kLi2yl-xGiFvxRl84V-4dyvyaO0a/view" target="_blank" rel="noopener noreferrer">
+          <a href="https://drive.google.com/file/d/1rkameX_xWKpW5McdSpzLbS-Odt70uPYg/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               <button className="button-85" role="button">Resume</button>
             </a>
             <a href="mailto:nicholasj.grosso@gmail.com">
@@ -29,6 +30,7 @@ const ProfileCard: React.FC = () => {
             <a href="https://github.com/ngrosso1" target="_blank" rel="noopener noreferrer">
               <FaGithub className="icon" />
             </a>
+            </div>
           </div>
         </div>
         <img
