@@ -8,16 +8,17 @@ import FeaturedProjects from './FeaturedProjects';
 import About from './About';
 import Contact from './Contact';
 import ProjectsList from './ProjectsList';
-// Ensure this matches your filename exactly
+import SwirlBackground from './SwirlBackground'; // Add this import
 
 const App: React.FC = () => {
   return (
     <Router>
+      <SwirlBackground /> {/* Add this component */}
       <Header />
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<ProjectsList />} /> {/* Link to ProjectsList */}
+        <Route path="/projects" element={<ProjectsList />} />
         <Route 
           path="/" 
           element={
