@@ -4,6 +4,7 @@ import './FeaturedProjects.scss';
 import c4 from "./logos/c4.gif"
 import wordle from "./logos/wordleclone.gif"
 import task from "./logos/task.gif"
+import insta from "./logos/insta.gif"
 
 interface Project {
   title: string;
@@ -11,6 +12,8 @@ interface Project {
   imageUrl: string;
   techStack: string[];
   repoLink: string;
+  liveLink?: string;
+  latestRelease?: string;
 }
 
 const projects: Project[] = [
@@ -27,6 +30,14 @@ const projects: Project[] = [
     imageUrl: wordle, // Update with the actual path to your image
     techStack: ['HTML/CSS', 'Javascript', 'NodeJS'],
     repoLink: 'https://github.com/ngrosso1/wordle_clone'
+  },
+  {
+    title: 'Instagram Unliker',
+    description: 'Coded a GUI application to easily automate removing Instagram likes',
+    imageUrl: insta, // Update with the actual path to your image
+    techStack: ['Python'],
+    repoLink: 'https://github.com/ngrosso1/InstaUnlikerGUI',
+    latestRelease: 'https://github.com/ngrosso1/InstaUnlikerGUI/releases'
   }
 ];
 
@@ -46,6 +57,12 @@ const FeaturedProjects: React.FC = () => {
               ))}
             </div>
             <a href={project.repoLink} className="repo-link" target="_blank" rel="noopener noreferrer">Source</a>
+            {project.liveLink && (
+              <a href={project.liveLink} className="repo-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            )}
+            {project.latestRelease && (
+              <a href={project.latestRelease} className="repo-link" target="_blank" rel="noopener noreferrer">Latest Release</a>
+            )}
           </div>
         ))}
       </div>
