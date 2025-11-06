@@ -1,0 +1,69 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: hsl(260, 40%, 5%);
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.App {
+  display: block; /* Remove any flex or grid layout unless necessary */
+  overflow-y: auto; /* Ensure it allows scrolling */
+}
+
+/* Ensure no components are restricting overflow */
+header, .profile-card, .experience-tabs, .featured-projects {
+  overflow: visible;
+  position: relative; /* Avoid fixed positioning if not needed */
+}
+
+/* index.scss or global CSS file */
+/* App.scss or index.scss */
+html, body, .App {
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* index.scss */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Fix phones? */
+@media (max-width: 768px) {
+  /* Adjust header position and size */
+  .header {
+    top: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px; /* Adjust font size */
+  }
+  /* Navigation adjustments */
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links li {
+    margin: 5px 0;
+  }
+  /* Main container adjustments */
+  .App {
+    padding: 10px; /* Reduce padding for mobile */
+  }
+}
+/* fix waves */
+@media (max-width: 768px) {
+  .wave {
+    height: 100px;
+    width: 3200px; /* Adjust width for smaller screens */
+  }
+  .ocean {
+    height: 3%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

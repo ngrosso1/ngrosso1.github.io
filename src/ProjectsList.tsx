@@ -5,6 +5,7 @@ import c4 from "./logos/c4.gif";
 import wordle from "./logos/wordleclone.gif";
 import task from "./logos/task.gif";
 import insta from "./logos/insta.gif"
+import vfioh from "./logos/vfioh.gif"
 
 interface Project {
   title: string;
@@ -17,6 +18,13 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: 'VFIOH',
+    description: 'VFIO, or Virtual Function I/O, IOMMU/device agnostic framework for exposing direct device access to userspace, in a secure, IOMMU protected environment. This terminal application helps install dependencies, configure instances, and run virt manager set ups for the KVM.',
+    imageUrl: vfioh, // Update with the actual path to your image
+    techStack: ['Python', 'Bash'],
+    repoLink: 'https://github.com/ngrosso1/Single-GPU-passthrough',
+  },
   {
     title: 'Task Manager',
     description: 'Developed a full-stack task management application using React for frontend and a RESTful API in TypeScript for backend, enabling CRUD operations with seamless integration between client and server',
