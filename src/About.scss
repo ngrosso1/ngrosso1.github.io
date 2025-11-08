@@ -3,30 +3,27 @@
 .about {
   max-width: 750px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.014);
   color: #ffffff;
   backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
   align-items: center;
   
-  /* Remove absolute positioning for better mobile experience */
-  /* Use margin-top instead to center vertically when needed */
   margin-top: 2rem;
+  padding: 2rem; /* Added padding so content has breathing room */
   
-  /* Ensure minimum height and proper spacing */
-  min-height: calc(100vh - 4rem);
+  /* Remove this line that's causing the height issue: */
+  /* min-height: calc(100vh - 4rem); */
+  
+  /* Keep justify-content for centering content inside */
   justify-content: center;
+  margin-top: 12rem;
   
   /* Mobile-specific adjustments */
   @media (max-width: 768px) {
     margin: 1rem auto;
     padding: 1rem;
     max-width: 95%;
-    min-height: auto;
-    
-    /* Add some top margin to account for any fixed header */
     margin-top: 1rem;
   }
   
@@ -55,7 +52,7 @@
     p {
       font-size: 0.95rem;
       line-height: 1.6;
-      text-align: left; /* Better readability on mobile */
+      text-align: left;
     }
   }
   

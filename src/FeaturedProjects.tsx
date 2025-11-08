@@ -22,7 +22,7 @@ const projects: Project[] = [
     title: 'VFIOH',
     description: 'VFIO, or Virtual Function I/O, IOMMU/device agnostic framework for exposing direct device access to userspace, in a secure, IOMMU protected environment. This terminal application helps install dependencies, configure instances, and run virt manager set ups for the KVM.',
     imageUrl: vfioh, // Update with the actual path to your image
-    techStack: ['Python', 'Bash'],
+    techStack: ['Python', 'KVM', 'Bash', 'VFIO', 'Linux'],
     repoLink: 'https://github.com/ngrosso1/Single-GPU-passthrough',
   },
   {

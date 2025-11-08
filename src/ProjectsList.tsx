@@ -22,7 +22,7 @@ const projects: Project[] = [
     title: 'VFIOH',
     description: 'VFIO, or Virtual Function I/O, IOMMU/device agnostic framework for exposing direct device access to userspace, in a secure, IOMMU protected environment. This terminal application helps install dependencies, configure instances, and run virt manager set ups for the KVM.',
     imageUrl: vfioh, // Update with the actual path to your image
-    techStack: ['Python', 'Bash'],
+    techStack: ['Python', 'KVM', 'Bash', 'VFIO', 'Linux'],
     repoLink: 'https://github.com/ngrosso1/Single-GPU-passthrough',
   },
   {
@@ -34,7 +34,7 @@ const projects: Project[] = [
   },
   {
     title: 'Wordle Recreation',
-    description: 'Recreated the popular game Wordle using HTML, CSS, and JavaScript.',
+    description: 'Recreated the popular word puzzle game Wordle using HTML, CSS, and JavaScript. Implemented core gameplay logic, animations, and keyboard interaction to closely mirror the original experience. Designed a responsive layout for smooth play across desktop and mobile browsers.',
     imageUrl: wordle,
     techStack: ['HTML/CSS', 'JavaScript', 'NodeJS'],
     repoLink: 'https://github.com/ngrosso1/wordle_clone',
@@ -42,9 +42,9 @@ const projects: Project[] = [
   },
   {
     title: 'Instagram Unliker',
-    description: 'Coded a GUI application to easily automate removing Instagram likes',
+    description: 'Developed a cross-platform GUI application that automates the removal of liked posts on Instagram. Built with the Instagrapi API, the tool streamlines unliking activity through a simple, user-friendly interface. Packaged into standalone binaries for Windows, macOS, and Linux, ensuring easy installation and accessibility across platforms.',
     imageUrl: insta, // Update with the actual path to your image
-    techStack: ['Python'],
+    techStack: ['Python', 'API', 'BASH', 'Windows', 'OSX', 'Linux'],
     repoLink: 'https://github.com/ngrosso1/InstaUnlikerGUI',
     latestRelease: 'https://github.com/ngrosso1/InstaUnlikerGUI/releases'
   }
@@ -65,7 +65,7 @@ const ProjectsList: React.FC = () => {
                 <span key={idx} className="tech">{tech}</span>
               ))}
             </div>
-            <a href={project.repoLink} className="repo-link" target="_blank" rel="noopener noreferrer">Source</a>
+            <a href={project.repoLink} className="repo-link" target="_blank" rel="noopener noreferrer">GitHub</a>
             {project.liveLink && (
               <a href={project.liveLink} className="repo-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
             )}

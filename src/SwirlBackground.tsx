@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 
-// Utility functions
 const { random } = Math;
 const rand = (n: number) => n * random();
 const fadeInOut = (t: number, m: number) => {
@@ -8,18 +7,17 @@ const fadeInOut = (t: number, m: number) => {
   return Math.abs((t + hm) % m - hm) / hm;
 };
 
-// Bubble configuration
 const bubbleCount = 100;
-const bubblePropCount = 7; // Reduced since we removed wobble property
+const bubblePropCount = 7; // Wobble property
 const bubblePropsLength = bubbleCount * bubblePropCount;
-const baseSpeed = 0.15; // Reduced from 0.3 for slower movement
-const rangeSpeed = 0.35; // Reduced from 0.7 for slower movement
+const baseSpeed = 0.15;
+const rangeSpeed = 0.35;
 const baseRadius = 2;
 const rangeRadius = 6;
-const baseHue = 125; // Centered on viridian (160-180 is viridian to cyan range)
-const rangeHue = 30; // Range covers viridian, teal, cyan (145-190)
-const baseTTL = 200;
-const rangeTTL = 300;
+const baseHue = 125;
+const rangeHue = 30;
+const baseTTL = 400;
+const rangeTTL = 500;
 const backgroundColor = 'hsla(200,60%,3%,1)';
 
 const BubblingBackground: React.FC = () => {
@@ -42,7 +40,7 @@ const BubblingBackground: React.FC = () => {
 
     const initBubble = (i: number) => {
       const x = rand(canvasA.width);
-      const y = canvasA.height + rand(50); // Start just below screen
+      const y = canvasA.height + rand(50); // Starting at bottom of screen
       const speed = baseSpeed + rand(rangeSpeed);
       const radius = baseRadius + rand(rangeRadius);
       const hue = baseHue + rand(rangeHue);
@@ -60,10 +58,10 @@ const BubblingBackground: React.FC = () => {
       life: number, 
       ttl: number
     ) => {
-      // Fade out as bubble approaches top
+      // Fade out
       let positionFade = 1;
-      if (y < canvasA.height * 0.15) {
-        positionFade = Math.max(0, y / (canvasA.height * 0.15));
+      if (y < canvasA.height * 0.01) {
+        positionFade = Math.max(0, y / (canvasA.height * 0.01));
       }
       
       const lifeFade = fadeInOut(life, ttl);
@@ -75,7 +73,7 @@ const BubblingBackground: React.FC = () => {
       ctxA.fillStyle = `hsla(${hue},100%,60%,${opacity * 0.6})`;
       ctxA.fill();
       
-      // Add a glow effect
+      // Glow effect
       const gradient = ctxA.createRadialGradient(x, y, 0, x, y, radius);
       gradient.addColorStop(0, `hsla(${hue},100%,80%,${opacity})`);
       gradient.addColorStop(0.5, `hsla(${hue},100%,60%,${opacity * 0.5})`);
@@ -98,7 +96,7 @@ const BubblingBackground: React.FC = () => {
       let life = bubbleProps[i6];
       const ttl = bubbleProps[i7];
 
-      // Move bubble upward (no wobble)
+      // Upward movement
       y -= speed;
 
       drawBubble(x, y, radius, hue, life, ttl);
@@ -162,14 +160,12 @@ const BubblingBackground: React.FC = () => {
       animationFrameRef.current = window.requestAnimationFrame(draw);
     };
 
-    // Initialize
     resize();
     for (let i = 0; i < bubblePropsLength; i += bubblePropCount) {
       initBubble(i);
     }
     draw();
 
-    // Event listeners
     window.addEventListener('resize', resize);
 
     return () => {
