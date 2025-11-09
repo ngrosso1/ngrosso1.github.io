@@ -1,81 +1,159 @@
-.contact {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 20px;
-  color: #ffffff;
-  backdrop-filter: blur(14px);
+.contact-section {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 2rem;
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  position: relative;
+  //background-color: rgba(0, 0, 0, 0.2); // add slight opacity to the section
+  border-radius: 15px;
+}
+
+.contact-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2rem;
+  border-left: 6px solid #00ff6a;
+  padding-left: 0.5rem;
+  background: linear-gradient(to right, #00ff6a, transparent);
+  display: inline-block;
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  
-  /* Center the .contact container in the viewport */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  /* Add gradient fade effect */
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0.02) 50%,
-      transparent 100%
-    );
-    pointer-events: none;
-    border-radius: 20px;
-  }
-  
-  /* Fade the edges */
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 15%,
-    black 85%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 15%,
-    black 85%,
-    transparent 100%
-  );
+  gap: 1.5rem;
 }
 
-.contact h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  z-index: 1;
 }
 
-.contact p {
-  font-size: 16px;
-  margin: 5px 0;
-  text-align: center;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
+.form-group.full {
+  width: 100%;
 }
 
-/* Style for the contact label (e.g., "Phone", "Email") */
-.contact-label {
-  display: block;
+label {
   font-weight: bold;
-  text-decoration: underline;
-  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
 }
 
-/* Style for the contact info itself */
-.contact-info {
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
+input,
+textarea {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  &:hover {
+    border-color: #3a82ff;
+    box-shadow: 0 0 10px rgba(58, 130, 255, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #3a82ff;
+    box-shadow: 0 0 15px rgba(58, 130, 255, 0.75);
+  }
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.send-button {
+  align-self: center;
+  margin-top: 1rem;
+  background: rgba(158, 158, 158, 0.2); // semi-transparent background
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.75rem 2rem;
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(0, 95, 255, 0.6); // more opaque on hover
+    box-shadow: 0 0 10px #005fff80;
+    transform: translateY(-2px);
+  }
+}
+
+.email-display {
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px dashed #005fff;
+
+    &:hover {
+      color: #3a82ff;
+    }
+  }
+}
+
+.contact-info-display {
+  margin-top: 2rem;
+  //background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px dashed #005fff;
+
+    &:hover {
+      color: #3a82ff;
+    }
+  }
+}
+
+/* Mobile: stack email and phone */
+@media (max-width: 600px) {
+  .contact-info-display {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .contact-item {
+      justify-content: center;
+    }
+  }
 }

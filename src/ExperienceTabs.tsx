@@ -1,5 +1,4 @@
 // src/ExperienceTabs.tsx
-
 import React, { useState } from 'react';
 import './ExperienceTabs.scss';
 import lumenLogo from './logos/lumen.png';
@@ -9,24 +8,39 @@ import binghamton from './logos/binghamton.png'
 
 const workExperience = [
   {
-    date: "May 2022 - Present",
+    date: "May 2022 - Nov 2025",
     company: "Lumen Technologies",
     role: "Software Engineer II",
-    description: "Developed and maintained on broadcast encoding and resilient media transport complexes in support of both live and linear content delivery systems using C++, JavaScript, Go, and Python. Implemented containerized docker deployments using Kubernetes as a service via Rancher to streamline application scalability and resilience",
+    description: "\t At Lumen, I worked on the evolution of the Vyvx Broadcast Solutions platform a large scale global system \
+    supporting live and linear media delivery. I developed and maintained broadcast encoding and resilient media transport \
+    systems while designing and deploying solutions that improved automation, scalability, and reliability. My work involved a \
+    wide range of technologies including C++, GoLang, JavaScript, C#, Python, SQL, PowerBuilder, and ASP.NET, as well as \
+    containerized Docker deployments managed through Kubernetes and Rancher. I also helped define and document standards for \
+    the production network, contributed to testing and integration efforts, and collaborated across teams to ensure alignment \
+    with broader architectural and strategic goals.",
     logo: lumenLogo,
   },
   {
     date: "July 2021 - Jan 2022",
     company: "Esurgi BioTech",
     role: "Software Engineering Intern",
-    description: "Led a team on the driver code for a pump mechanism in a medical device. Managed workflow using C++, AT Commands, and Swift with tools such as Git and Arduino IDE. Implemented Bluetooth connectivity between an Arduino and an iOS device for seamless connection",
+    description: "During my software engineering internship at Esurgi BioTech, I led development of the driver code for a \
+    medical device’s pump mechanism, collaborating with both software and hardware teams to bring the system to life. \
+    I worked primarily in C++, Swift, and AT Commands, using tools like Git and the Arduino IDE to manage code and testing \
+    across multiple components. A key part of my work involved implementing Bluetooth communication between an Arduino-based \
+    controller and an iOS application, enabling reliable real-time data exchange and device control.",
     logo: esurgiLogo,
   },
   {
     date: "May 2021 - Aug 2021",
     company: "AT&T",
     role: "Software Engineering Exten",
-    description: "Learning overviews concerning implementation of such topics as AI, Cloud Computing, IoT, design planning, Project Development, Video Game Production, and Cyber Security",
+    description: "During my externship with AT&T’s Summer Learning Academy, I completed an intensive 80‑hour virtual program \
+    designed to strengthen both technical and professional acumen. I explored emerging fields including artificial intelligence, \
+    cloud computing, the Internet of Things, cybersecurity, game design production, and project development, while engaging in \
+    workshops and hands‑on learning modules that bridged technology and business. I also developed communication and leadership \
+    skills through interactive sessions with industry professionals and peers, gaining practical insights into how large-scale \
+    organizations like AT&T approach innovation and digital transformation.",
     logo: atntLogo,
   },
 ];
@@ -75,7 +89,6 @@ const ExperienceTabs = () => {
             ))}
           </ul>
         ) : (
-          //new eductation start
           <ul className="experience-list">
             {educationList.map((item, index) => (
               <li key={index} className="experience-item">
@@ -88,7 +101,6 @@ const ExperienceTabs = () => {
               </li>
             ))}
           </ul>
-          //end eductation
         )}
       </div>
     </div>

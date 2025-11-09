@@ -71,29 +71,23 @@ body {
 /* Profile picture styling */
 .profile-picture {
   width: 220px;
-  //height: 214px;
-  border-radius: 0;
+  height: 220px;       // make it square so the circle works perfectly
+  border-radius: 50%;   // makes it a circle
   object-fit: cover;
-  //flex-shrink: 0; // Prevent shrinking
-  order: 2; /* Ensure image appears on the right */
+  order: 2;
   
   @media (max-width: 768px) {
-    width: 120px; /* Smaller on mobile to fit */
-    //height: 128px;
-    order: 2; /* Keep on the right */
-  }
-  
-  @media (max-width: 480px) {
-    //width: 100px;
-    //height: 107px;
-    object-fit: cover;
+    width: 120px;
+    height: 120px;
+    order: 2;
   }
   
   @media (max-width: 320px) {
     width: 80px;
-    height: 86px;
+    height: 80px;
   }
 }
+
 
 /* Adjusted styling for headings */
 h1 {
