@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.f5818892.css",
-    "main.js": "/static/js/main.d1c22fed.js",
+    "main.css": "/static/css/main.37e3f24c.css",
+    "main.js": "/static/js/main.ec3003a5.js",
     "static/js/453.d73b0aaa.chunk.js": "/static/js/453.d73b0aaa.chunk.js",
     "static/media/vfioh.gif": "/static/media/vfioh.1d1ea75941917fee8f83.gif",
     "static/media/wordleclone.gif": "/static/media/wordleclone.9853c860bf3bfb48c85f.gif",
     "static/media/task.gif": "/static/media/task.a4da8cf818f2c450633e.gif",
     "static/media/insta.gif": "/static/media/insta.f5e90fa5dc9867ae50e6.gif",
-    "static/media/grosso.png": "/static/media/grosso.50e877954e5e4d6f2f87.png",
+    "static/media/grosso.png": "/static/media/grosso.857bb57c8de72b7cc8d8.png",
     "static/media/esurgi.png": "/static/media/esurgi.22101d1d8fd7ca456919.png",
     "static/media/binghamton.png": "/static/media/binghamton.bda411928e4684107315.png",
     "static/media/atnt.png": "/static/media/atnt.5565274bc8284434940b.png",
     "index.html": "/index.html",
-    "main.f5818892.css.map": "/static/css/main.f5818892.css.map",
-    "main.d1c22fed.js.map": "/static/js/main.d1c22fed.js.map",
+    "main.37e3f24c.css.map": "/static/css/main.37e3f24c.css.map",
+    "main.ec3003a5.js.map": "/static/js/main.ec3003a5.js.map",
     "453.d73b0aaa.chunk.js.map": "/static/js/453.d73b0aaa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5818892.css",
-    "static/js/main.d1c22fed.js"
+    "static/css/main.37e3f24c.css",
+    "static/js/main.ec3003a5.js"
   ]
 }
