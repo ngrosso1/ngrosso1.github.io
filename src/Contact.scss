@@ -1,44 +1,81 @@
 .contact {
   max-width: 750px;
-  margin: 0 auto; /* Centers the container horizontally */
+  margin: 0 auto;
   padding: 20px;
-  //background-color: rgba(255, 255, 255, 0.014);
   color: #ffffff;
   backdrop-filter: blur(14px);
   display: flex;
-  flex-direction: column; /* Allow content to stack vertically */
-  align-items: center; /* Centers content within the container */
+  flex-direction: column;
+  align-items: center;
   
-  /* Center the .about container in the viewport */
+  /* Center the .contact container in the viewport */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
+  /* Add gradient fade effect */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 50%,
+      transparent 100%
+    );
+    pointer-events: none;
+    border-radius: 20px;
+  }
+  
+  /* Fade the edges */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
 }
 
 .contact h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .contact p {
   font-size: 16px;
   margin: 5px 0;
   text-align: center;
-  margin-bottom: 1rem; /* Add more space between contact items */
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* Style for the contact label (e.g., "Phone", "Email") */
 .contact-label {
-  display: block; /* Make it a block-level element to force a new line */
+  display: block;
   font-weight: bold;
   text-decoration: underline;
-  margin-bottom: 4px; /* Add some space between the label and the info */
+  margin-bottom: 4px;
 }
 
 /* Style for the contact info itself */
 .contact-info {
-  display: block; /* Ensure it also behaves as a block if needed */
-  color: #ffffff; /* Ensure link color is white */
-  text-decoration: none; /* Remove underline from email link */
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
 }

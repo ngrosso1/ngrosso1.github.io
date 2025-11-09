@@ -13,7 +13,7 @@ interface Project {
   imageUrl: string;
   techStack: string[];
   repoLink: string;
-  liveLink?: string; // Optional property for live demo link
+  liveLink?: string;
   latestRelease?: string;
 }
 
@@ -21,7 +21,7 @@ const projects: Project[] = [
   {
     title: 'VFIOH',
     description: 'VFIO, or Virtual Function I/O, IOMMU/device agnostic framework for exposing direct device access to userspace, in a secure, IOMMU protected environment. This terminal application helps install dependencies, configure instances, and run virt manager set ups for the KVM.',
-    imageUrl: vfioh, // Update with the actual path to your image
+    imageUrl: vfioh,
     techStack: ['Python', 'KVM', 'Bash', 'VFIO', 'Linux'],
     repoLink: 'https://github.com/ngrosso1/Single-GPU-passthrough',
   },
@@ -29,21 +29,21 @@ const projects: Project[] = [
     title: 'Task Manager',
     description: 'Developed a full-stack task management application using React for frontend and a RESTful API in TypeScript for backend, enabling CRUD operations with seamless integration between client and server',
     imageUrl: task,
-    techStack: ['AWS Lambda', 'REST API', 'React', 'Typescript', 'DynamoDB'],
+    techStack: ['Typescript', 'AWS Lambda', 'REST API', 'React', 'DynamoDB', 'HTML/CSS'],
     repoLink: 'https://github.com/ngrosso1/taskManager'
   },
   {
     title: 'Wordle Recreation',
     description: 'Recreated the popular word puzzle game Wordle using HTML, CSS, and JavaScript. Implemented core gameplay logic, animations, and keyboard interaction to closely mirror the original experience. Designed a responsive layout for smooth play across desktop and mobile browsers.',
     imageUrl: wordle,
-    techStack: ['HTML/CSS', 'JavaScript', 'NodeJS'],
+    techStack: ['JavaScript', 'NodeJS', 'HTML/CSS'],
     repoLink: 'https://github.com/ngrosso1/wordle_clone',
-    liveLink: 'https://ngrosso1.github.io/wordle_clone/' // Add live link here
+    liveLink: 'https://ngrosso1.github.io/wordle_clone/'
   },
   {
     title: 'Instagram Unliker',
     description: 'Developed a cross-platform GUI application that automates the removal of liked posts on Instagram. Built with the Instagrapi API, the tool streamlines unliking activity through a simple, user-friendly interface. Packaged into standalone binaries for Windows, macOS, and Linux, ensuring easy installation and accessibility across platforms.',
-    imageUrl: insta, // Update with the actual path to your image
+    imageUrl: insta,
     techStack: ['Python', 'API', 'BASH', 'Windows', 'OSX', 'Linux'],
     repoLink: 'https://github.com/ngrosso1/InstaUnlikerGUI',
     latestRelease: 'https://github.com/ngrosso1/InstaUnlikerGUI/releases'
