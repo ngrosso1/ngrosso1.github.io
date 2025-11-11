@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a31e19e.css",
-    "main.js": "/static/js/main.e67912b1.js",
+    "main.css": "/static/css/main.9bea11ed.css",
+    "main.js": "/static/js/main.e4da1ea4.js",
     "static/js/453.d73b0aaa.chunk.js": "/static/js/453.d73b0aaa.chunk.js",
     "static/media/vfioh.gif": "/static/media/vfioh.1d1ea75941917fee8f83.gif",
     "static/media/wordleclone.gif": "/static/media/wordleclone.9853c860bf3bfb48c85f.gif",
@@ -12,12 +12,12 @@
     "static/media/binghamton.png": "/static/media/binghamton.bda411928e4684107315.png",
     "static/media/atnt.png": "/static/media/atnt.5565274bc8284434940b.png",
     "index.html": "/index.html",
-    "main.7a31e19e.css.map": "/static/css/main.7a31e19e.css.map",
-    "main.e67912b1.js.map": "/static/js/main.e67912b1.js.map",
+    "main.9bea11ed.css.map": "/static/css/main.9bea11ed.css.map",
+    "main.e4da1ea4.js.map": "/static/js/main.e4da1ea4.js.map",
     "453.d73b0aaa.chunk.js.map": "/static/js/453.d73b0aaa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a31e19e.css",
-    "static/js/main.e67912b1.js"
+    "static/css/main.9bea11ed.css",
+    "static/js/main.e4da1ea4.js"
   ]
 }
