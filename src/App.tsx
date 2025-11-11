@@ -14,7 +14,7 @@ import StatsSection from './StatsSection';
 const App: React.FC = () => {
   return (
     <Router>
-      <SwirlBackground /> {/* Add this component */}
+      <SwirlBackground />
       <Header />
       <Routes>
         <Route path="/about" element={<About />} />
@@ -27,7 +27,7 @@ const App: React.FC = () => {
               <ProfileCard />
               <StatsSection />
               <ExperienceTabs />
-              {/* <FeaturedProjects /> */}
+              <FeaturedProjects />
             </div>
           } 
         />

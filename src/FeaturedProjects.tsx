@@ -39,20 +39,12 @@ const projects: Project[] = [
     techStack: ['Javascript', 'NodeJS', 'HTML/CSS'],
     repoLink: 'https://github.com/ngrosso1/wordle_clone'
   },
-  {
-    title: 'Instagram Unliker',
-    description: 'Developed a cross-platform GUI application that automates the removal of liked posts on Instagram. Built with the Instagrapi API, the tool streamlines unliking activity through a simple, user-friendly interface. Packaged into standalone binaries for Windows, macOS, and Linux, ensuring easy installation and accessibility across platforms.',
-    imageUrl: insta,
-    techStack: ['Python', 'API', 'BASH', 'Windows', 'OSX', 'Linux'],
-    repoLink: 'https://github.com/ngrosso1/InstaUnlikerGUI',
-    latestRelease: 'https://github.com/ngrosso1/InstaUnlikerGUI/releases'
-  }
 ];
 
 const FeaturedProjects: React.FC = () => {
   return (
     <section className="featured-projects">
-      <h2>Featured Projects</h2>
+      <h2>A small selection of of recent projects</h2>
       <div className="projects-container">
         {projects.map((project, index) => (
           <div key={index} className="project-card">

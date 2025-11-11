@@ -5,13 +5,14 @@ import lumenLogo from './logos/lumen.png';
 import esurgiLogo from './logos/esurgi.png';
 import atntLogo from './logos/atnt.png'
 import binghamton from './logos/binghamton.png'
+//\u00A0\u00A0\u00A0\u00A0 = tab
 
 const workExperience = [
   {
     date: "May 2022 - Nov 2025",
     company: "Lumen Technologies",
     role: "Software Engineer II",
-    description: "\t At Lumen, I worked on the evolution of the Vyvx Broadcast Solutions platform a large scale global system \
+    description: "At At Lumen, I worked on the evolution of the Vyvx Broadcast Solutions platform a large scale global system \
     supporting live and linear media delivery. I developed and maintained broadcast encoding and resilient media transport \
     systems while designing and deploying solutions that improved automation, scalability, and reliability. My work involved a \
     wide range of technologies including C++, GoLang, JavaScript, C#, Python, SQL, PowerBuilder, and ASP.NET, as well as \
@@ -68,8 +69,7 @@ const ExperienceTabs = () => {
         </button>
         <button
           className={activeTab === 'Education' ? 'active' : ''}
-          onClick={() => setActiveTab('Education')}
-        >
+          onClick={() => setActiveTab('Education')}>
           Education
         </button>
       </div>
