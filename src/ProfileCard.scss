@@ -9,18 +9,17 @@ body {
 /* Main profile card container */
 .profile-card {
   max-width: 800px;
-  margin: 40px auto 20px auto; /* Increased top margin from 20px to 40px */
+  margin: 40px auto 20px auto;
   padding: 40px;
   box-sizing: border-box;
   
-  // Mobile responsiveness
   @media (max-width: 768px) {
-    margin: 50px 10px 20px 10px; /* Increased top margin for mobile */
+    margin: 50px 10px 20px 10px;
     padding: 15px;
   }
   
   @media (max-width: 480px) {
-    margin: 45px 5px 20px 5px; /* Increased top margin for small mobile */
+    margin: 45px 5px 20px 5px;
     padding: 10px;
   }
   
@@ -33,15 +32,14 @@ body {
 .profile-content {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between; /* Changed from flex-start to space-between */
+  justify-content: space-between;
   width: 100%;
   gap: 20px;
   
-  // Keep horizontal layout on mobile but adjust
   @media (max-width: 768px) {
-    flex-direction: row; /* Keep horizontal layout */
-    align-items: flex-start; /* Align to top */
-    justify-content: space-between; /* Text left, image right */
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 15px;
   }
   
@@ -55,12 +53,12 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  flex: 1; /* Take up available space */
+  flex: 1;
   
   @media (max-width: 768px) {
-    text-align: left; /* Keep left aligned */
-    align-items: flex-start; /* Align items to start */
-    max-width: 60%; /* Limit width to leave space for image */
+    text-align: left;
+    align-items: flex-start;
+    max-width: 60%;
   }
   
   @media (max-width: 480px) {
@@ -68,18 +66,24 @@ body {
   }
 }
 
-/* Profile picture styling */
-.profile-picture {
+/* ===== ANIMATED PROFILE PICTURE STYLES ===== */
+
+/* Container for the profile picture with animation */
+.profile-picture-container {
+  position: relative;
   width: 220px;
-  height: 220px;       // make it square so the circle works perfectly
-  border-radius: 50%;   // makes it a circle
-  object-fit: cover;
+  height: 220px;
+  flex-shrink: 0;
   order: 2;
   
   @media (max-width: 768px) {
     width: 120px;
     height: 120px;
-    order: 2;
+  }
+  
+  @media (max-width: 480px) {
+    width: 100px;
+    height: 100px;
   }
   
   @media (max-width: 320px) {
@@ -88,16 +92,94 @@ body {
   }
 }
 
+/* Image wrapper */
+.image-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 255, 153, 0.3);
+  z-index: 1;
+}
 
-/* Adjusted styling for headings */
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: block;
+}
+
+.svg-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 228px;
+  height: 228px;
+  z-index: 2;
+  pointer-events: none;
+  
+  @media (max-width: 768px) {
+    width: 126px;
+    height: 126px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 106px;
+    height: 106px;
+  }
+  
+  @media (max-width: 320px) {
+    width: 86px;
+    height: 86px;
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.rotating-circle {
+  animation: rotate 12s linear infinite, pulse 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    stroke-dasharray: 15 41 87 68;
+  }
+  25% {
+    stroke-dasharray: 25 31 77 78;
+  }
+  50% {
+    stroke-dasharray: 10 51 67 83;
+  }
+  75% {
+    stroke-dasharray: 30 26 92 63;
+  }
+}
+
+/* ===== END ANIMATED STYLES ===== */
+
 h1 {
   font-size: 1.8em;
   font-weight: 700;
-  margin: 0 0 10px 0; /* Added bottom margin for better spacing */
+  margin: 0 0 10px 0;
   color: #ffffff;
   
   @media (max-width: 768px) {
-    font-size: 1.4em; /* Smaller to fit with image */
+    font-size: 1.4em;
     margin-bottom: 8px;
   }
   
@@ -115,7 +197,7 @@ h1 {
 .subtitle {
   font-size: 1em;
   color: #c7c7c7;
-  margin-bottom: 15px; /* Added margin for better spacing */
+  margin-bottom: 15px;
   
   @media (max-width: 768px) {
     font-size: 0.85em;
@@ -154,7 +236,7 @@ h1 {
   transition: color 0.3s;
   
   @media (max-width: 768px) {
-    font-size: 1.4em; /* Smaller icons */
+    font-size: 1.4em;
   }
   
   @media (max-width: 480px) {
@@ -180,11 +262,9 @@ h1 {
   border-radius: 10px;
   position: relative;
   z-index: 0;
-  font-size: 1em; // Add base font size
+  font-size: 1em;
   
   @media (max-width: 768px) {
-    //padding: 0.4em 1em; /* Smaller button */
-    //font-size: 0.8em;
     margin-top: 5px;
   }
   
@@ -249,14 +329,11 @@ h1 {
   border-radius: 10px;
 }
 
-/* Remove conflicting App padding - let App.scss handle this */
-/* Removed the .App rule that was conflicting */
-
 .social-section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px; // Adjust spacing between icons and button
+  gap: 10px;
   margin-top: 10px;
 
   @media (max-width: 768px) {

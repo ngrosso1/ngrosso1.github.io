@@ -5,8 +5,6 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { IoMail } from "react-icons/io5";
 import grosso from "./logos/grosso.png"
 
-const NICK_BIRTH_YEAR = 1999;
-
 const ProfileCard: React.FC = () => {
   return (
     <div className="profile-card">
@@ -14,7 +12,7 @@ const ProfileCard: React.FC = () => {
         <div className="text-info">
           <h1 className="nameHeader"> Nicholas J. Grosso</h1>
           <p className="subtitle">
-            {new Date().getFullYear() - NICK_BIRTH_YEAR}-year-old software engineer from Raleigh, NC
+            Fullstack Software Engineer | IT Specialist
           </p>
           <div className="social-section">
             <div className="social-icons">

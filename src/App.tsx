@@ -8,7 +8,8 @@ import FeaturedProjects from './FeaturedProjects';
 import About from './About';
 import Contact from './Contact';
 import ProjectsList from './ProjectsList';
-import SwirlBackground from './SwirlBackground'; // Add this import
+import SwirlBackground from './SwirlBackground';
+import StatsSection from './StatsSection';
 
 const App: React.FC = () => {
   return (
@@ -24,8 +25,9 @@ const App: React.FC = () => {
           element={
             <div className="App">
               <ProfileCard />
+              <StatsSection />
               <ExperienceTabs />
-              <FeaturedProjects />
+              {/* <FeaturedProjects /> */}
             </div>
           } 
         />
