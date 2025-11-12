@@ -35,7 +35,7 @@ const workExperience = [
   {
     date: "May 2021 - Aug 2021",
     company: "AT&T",
-    role: "Software Engineering Exten",
+    role: "Software Engineering Extern",
     description: "During my externship with AT&T’s Summer Learning Academy, I completed an intensive 80‑hour virtual program \
     designed to strengthen both technical and professional acumen. I explored emerging fields including artificial intelligence, \
     cloud computing, the Internet of Things, cybersecurity, game design production, and project development, while engaging in \

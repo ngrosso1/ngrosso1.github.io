@@ -19,9 +19,12 @@ const Header: React.FC = () => {
           <li>
             <Link to="/">{splitLetters('Home')}</Link>
           </li>
+          {/*
+          old About section
           <li>
             <Link to="/about">{splitLetters('About')}</Link>
           </li>
+          */}
           <li>
             <Link to="/projects">{splitLetters('Projects')}</Link>
           </li>

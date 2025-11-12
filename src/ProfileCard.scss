@@ -230,11 +230,11 @@ h1 {
 }
 
 .icon {
-  font-size: 3.33em;
+  font-size: 3em;
   color: #ffffff;
   cursor: pointer;
   transition: color 0.3s;
-  margin-top: -8px; /* move icons up slightly */
+  margin-top: -5px;
   
   @media (max-width: 768px) {
     font-size: 1.4em;
@@ -439,18 +439,67 @@ h1 {
 
 .social-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 10px;
   margin-top: 10px;
 
   @media (max-width: 768px) {
-    gap: 8px;
+    gap: 6px;
     margin-top: 8px;
   }
 
   @media (max-width: 480px) {
-    gap: 6px;
+    gap: 4px;
     margin-top: 6px;
   }
+}
+
+.wave {
+  display: inline-flex;         /* keeps it in-flow with text but a stable box */
+  align-items: center;
+  justify-content: center;
+  width: 1.15em;                /* fixed box width relative to font-size */
+  height: 1.15em;               /* fixed box height */
+  line-height: 1;               /* no extra line spacing */
+  vertical-align: middle;       /* aligns with text baseline */
+  transform-origin: center center; /* rotate about the center of the box */
+  will-change: transform;       /* hint to browser for smoother animations */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-size: 1.6rem;            /* control visual size (adjust as needed) */
+  /* optional: prevents any margin/jump from subpixel rounding */
+  box-sizing: content-box;
+  padding: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1em !important;
+    width: 1.0em;
+    height: 1.0em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.05em !important;
+    width: 1.0em;
+    height: 1.0em;
+  }
+}
+
+
+@keyframes wave-rotate {
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(14deg); }
+  20%  { transform: rotate(-8deg); }
+  30%  { transform: rotate(14deg); }
+  40%  { transform: rotate(-4deg); }
+  50%  { transform: rotate(10deg); }
+  60%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.nameHeader {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em; // adds a small space between the name and emoji
 }

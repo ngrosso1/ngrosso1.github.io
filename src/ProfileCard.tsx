@@ -10,28 +10,25 @@ const ProfileCard: React.FC = () => {
     <div className="profile-card">
       <div className="profile-content">
         <div className="text-info">
-          <h1 className="nameHeader"> Nicholas J. Grosso</h1>
+          <h1 className="nameHeader"> Nicholas J. Grosso <span className="wave">👋</span></h1>
           <p className="subtitle">
             Fullstack Software Engineer | IT Specialist
           </p>
           <div className="social-section">
-            <div className="social-icons">
-              <a href="https://drive.google.com/file/d/1rkameX_xWKpW5McdSpzLbS-Odt70uPYg/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="button-wrapper">
-                <button className="button-85" role="button">Resume</button>
-              </a>
-              <a href="mailto:nicholasj.grosso@gmail.com">
-                <IoMail className="icon" />
-              </a>
-              <a href="https://www.linkedin.com/in/nicholasjgrosso/" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="icon" />
-              </a>
-              <a href="https://github.com/ngrosso1" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="icon" />
-              </a>
-            </div>
+            <a href="https://drive.google.com/file/d/1rkameX_xWKpW5McdSpzLbS-Odt70uPYg/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="button-wrapper">
+              <button className="button-85" role="button">Resume</button>
+            </a>
+            <a href="mailto:nicholasj.grosso@gmail.com">
+              <IoMail className="icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/nicholasjgrosso/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="icon" />
+            </a>
+            <a href="https://github.com/ngrosso1" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="icon" />
+            </a>
           </div>
-        </div>
-        
+          </div>
         {/* Animated Profile Picture Container */}
         <div className="profile-picture-container">
           <div className="image-wrapper">
