@@ -5,7 +5,8 @@ import lumenLogo from './logos/lumen.png';
 import esurgiLogo from './logos/esurgi.png';
 import atntLogo from './logos/atnt.png'
 import binghamton from './logos/binghamton.png'
-//\u00A0\u00A0\u00A0\u00A0 = tab
+import google from './logos/google.png'
+import stanford from './logos/stanford.png'
 
 const workExperience = [
   {
@@ -26,7 +27,7 @@ const workExperience = [
     company: "Esurgi BioTech",
     role: "Software Engineering Intern",
     description: "During my software engineering internship at Esurgi BioTech, I led development of the driver code for a \
-    medical device’s pump mechanism, collaborating with both software and hardware teams to bring the system to life. \
+    medical device's pump mechanism, collaborating with both software and hardware teams to bring the system to life. \
     I worked primarily in C++, Swift, and AT Commands, using tools like Git and the Arduino IDE to manage code and testing \
     across multiple components. A key part of my work involved implementing Bluetooth communication between an Arduino-based \
     controller and an iOS application, enabling reliable real-time data exchange and device control.",
@@ -36,10 +37,10 @@ const workExperience = [
     date: "May 2021 - Aug 2021",
     company: "AT&T",
     role: "Software Engineering Extern",
-    description: "During my externship with AT&T’s Summer Learning Academy, I completed an intensive 80‑hour virtual program \
+    description: "During my externship with AT&T's Summer Learning Academy, I completed an intensive 80-hour virtual program \
     designed to strengthen both technical and professional acumen. I explored emerging fields including artificial intelligence, \
     cloud computing, the Internet of Things, cybersecurity, game design production, and project development, while engaging in \
-    workshops and hands‑on learning modules that bridged technology and business. I also developed communication and leadership \
+    workshops and hands-on learning modules that bridged technology and business. I also developed communication and leadership \
     skills through interactive sessions with industry professionals and peers, gaining practical insights into how large-scale \
     organizations like AT&T approach innovation and digital transformation.",
     logo: atntLogo,
@@ -52,6 +53,25 @@ const educationList = [
     company: "Binghamton University",
     role: "Computer Science",
     logo: binghamton,
+  }
+];
+
+const certificatesList = [
+  {
+    date: "April 2024",
+    name: "Data Analytics Professional Certificate",
+    organization: "Google",
+    credentialId: "GHUXJ74KLNS3",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/specialization/certificate/GHUXJ74KLNS3",
+    logo: google,
+  },
+  {
+    date: "August 2021",
+    name: "Algorithms Specialization",
+    organization: "Stanford Online",
+    credentialId: "NZSSRSYBF2F3",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/NZSSRSYBF2F3",
+    logo: stanford,
   }
 ];
 
@@ -89,18 +109,50 @@ const ExperienceTabs = () => {
             ))}
           </ul>
         ) : (
-          <ul className="experience-list">
-            {educationList.map((item, index) => (
-              <li key={index} className="experience-item">
-                <img src={item.logo} alt={`${item.company} logo`} className="company-logo" />
-                <div>
-                  <p>{item.date}</p>
-                  <h3>{item.company}</h3>
-                  <p>{item.role}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <div className="education-content">
+            <div className="education-section">
+              <h2 className="section-title">Academic</h2>
+              <ul className="experience-list">
+                {educationList.map((item, index) => (
+                  <li key={index} className="experience-item">
+                    <img src={item.logo} alt={`${item.company} logo`} className="company-logo" />
+                    <div>
+                      <p>{item.date}</p>
+                      <h3>{item.company}</h3>
+                      <p>{item.role}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="section-divider"></div>
+
+            <div className="education-section">
+              <h2 className="section-title">Certificates</h2>
+              <ul className="experience-list">
+                {certificatesList.map((item, index) => (
+                  <li key={index} className="experience-item certificate-item">
+                    <img src={item.logo} alt={`${item.organization} logo`} className="company-logo" />
+                    <div className="certificate-details">
+                      <p>{item.date}</p>
+                      <h3>{item.name}</h3>
+                      <p>{item.organization}</p>
+                      <p className="credential-id">Credential ID: {item.credentialId}</p>
+                      <a 
+                        href={item.credentialUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="credential-button"
+                      >
+                        Show credential
+                      </a>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         )}
       </div>
     </div>
