@@ -1,6 +1,6 @@
 // src/ExperienceTabs.tsx
 import React, { useState } from 'react';
-import './ExperienceTabs.scss';
+import './ExperienceTabs.css';
 import lumenLogo from './logos/lumen.png';
 import esurgiLogo from './logos/esurgi.png';
 import atntLogo from './logos/atnt.png'

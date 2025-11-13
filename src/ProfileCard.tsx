@@ -1,6 +1,6 @@
 // src/ProfileCard.tsx
 import React from 'react';
-import './ProfileCard.scss';
+import './ProfileCard.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { IoMail } from "react-icons/io5";
 import grosso from "./logos/grosso.png"

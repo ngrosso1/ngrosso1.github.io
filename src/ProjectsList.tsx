@@ -1,6 +1,6 @@
 // src/ProjectsList.tsx
 import React from 'react';
-import './ProjectsList.scss';
+import './ProjectsList.css';
 import c4 from "./logos/c4.gif";
 import wordle from "./logos/wordleclone.gif";
 import task from "./logos/task.gif";
