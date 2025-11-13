@@ -118,7 +118,6 @@ textarea {
 
 .contact-info-display {
   margin-top: 2rem;
-  //background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
@@ -137,7 +136,7 @@ textarea {
   a {
     color: #fff;
     text-decoration: none;
-    border-bottom: 1px dashed #005fff;
+    color: inherit;
 
     &:hover {
       color: #3a82ff;
