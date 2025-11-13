@@ -16,7 +16,6 @@ const StatsSection: React.FC = () => {
   ];
 
   useEffect(() => {
-    // Trigger visibility animation
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 200);
@@ -28,8 +27,8 @@ const StatsSection: React.FC = () => {
       animationStarted.current = true;
       
       stats.forEach((stat, index) => {
-        const duration = 1500; // 1.5 seconds for counting
-        const startDelay = index * 150; // Stagger each counter
+        const duration = 1500;
+        const startDelay = index * 150;
         const steps = 60;
         const increment = stat.value / steps;
         let currentStep = 0;

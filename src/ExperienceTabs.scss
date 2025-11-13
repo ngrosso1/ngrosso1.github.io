@@ -7,32 +7,32 @@
 
 .tabs {
   display: flex;
-  justify-content: space-between; /* Space buttons evenly */
+  justify-content: space-between;
   margin-bottom: 3px;
-  max-width: 100%; /* Ensure the tabs do not exceed the width of the container */
+  max-width: 100%;
 }
 
 .tabs button {
-  flex: 1; /* Make buttons take equal space */
-  padding: 10px 0; /* Adjust padding to center text vertically */
+  flex: 1;
+  padding: 10px 0;
   font-size: 1em;
   color: #ffffff;
-  background-color: rgba(26, 26, 26, 0.8); /* Semi-transparent black */
+  background-color: rgba(26, 26, 26, 0.8);
   border: 1px solid #333333;
   border-radius: 8px 8px 0 0;
   cursor: pointer;
-  text-align: center; /* Center the text in the button */
+  text-align: center;
 }
 
 .tabs .active {
-  background-color: rgba(51, 51, 51, 0.8); /* Darker background for active state */
+  background-color: rgba(51, 51, 51, 0.8);
 }
 
 .content {
-  background-color: rgba(255, 255, 255, 0.1); /* Light transparent white */
+  background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(8px); /* Support for older browsers */
-  border: 1px solid rgba(51, 51, 51, 0.5); /* Semi-transparent border */
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(51, 51, 51, 0.5);
   padding: 20px;
   border-radius: 0 0 8px 8px;
   backdrop-filter: blur(14px);
@@ -76,7 +76,7 @@
 }
 
 .experience-item .desc {
-  color: #ffffff; /* Ensure it's set to white */
+  color: #ffffff;
   margin: 0.5rem 0;
 }
 

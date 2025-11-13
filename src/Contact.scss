@@ -5,7 +5,6 @@
   color: #fff;
   font-family: 'IBM Plex Mono', monospace;
   position: relative;
-  //background-color: rgba(0, 0, 0, 0.2); // add slight opacity to the section
   border-radius: 15px;
 }
 
@@ -81,7 +80,7 @@ textarea {
 .send-button {
   align-self: center;
   margin-top: 1rem;
-  background: rgba(158, 158, 158, 0.2); // semi-transparent background
+  background: rgba(158, 158, 158, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 0.75rem 2rem;
@@ -146,7 +145,6 @@ textarea {
   }
 }
 
-/* Mobile: stack email and phone */
 @media (max-width: 600px) {
   .contact-info-display {
     flex-direction: column;

@@ -1,6 +1,4 @@
 /* header.scss */
-
-/* Ensure no body margins interfere */
 body {
   margin: 0;
   padding: 0;
@@ -8,7 +6,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Main header styles */
 .header {
   position: fixed;
   top: 20px;
@@ -29,7 +26,6 @@ body {
   margin: 0;
 }
 
-/* Navigation links */
 .nav-links {
   display: flex;
   justify-content: center;
@@ -45,7 +41,6 @@ body {
   margin: 0;
 }
 
-/* Link styling */
 .nav-links a {
   display: inline-flex;
   gap: 0;
@@ -56,23 +51,21 @@ body {
   cursor: pointer;
 }
 
-/* Rolling text container for each letter */
 .letter {
   display: inline-block;
   overflow: hidden;
   position: relative;
   line-height: 1.5em;
-  --delay: 0s; /* default */
+  --delay: 0s;
 }
 
-/* Front span - original color */
+
 .letter .front {
   display: block;
   transition: transform 0.4s ease var(--delay);
   color: #c4c2c2;
 }
 
-/* Back span - white text slides from below */
 .letter .back {
   display: block;
   position: absolute;
@@ -82,7 +75,6 @@ body {
   transition: transform 0.4s ease var(--delay);
 }
 
-/* Hover animation - front slides up, back slides in */
 .nav-links a:hover .letter .front {
   transform: translateY(-100%);
 }
@@ -91,12 +83,10 @@ body {
   transform: translateY(-100%);
 }
 
-/* Stagger letters by index using CSS variable */
 .letter {
-  --delay: calc(var(--i) * 0.05s); /* 0.05s stagger per letter */
+  --delay: calc(var(--i) * 0.05s);
 }
 
-/* Mobile styles */
 @media screen and (max-width: 768px) {
   .header {
     top: 10px;
@@ -120,7 +110,6 @@ body {
   }
 }
 
-/* Extra small screens */
 @media screen and (max-width: 480px) {
   .header {
     top: 8px;
@@ -148,7 +137,6 @@ body {
   }
 }
 
-/* Force centering for problematic devices */
 @media screen and (max-width: 768px) {
   body {
     position: relative;
