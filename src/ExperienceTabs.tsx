@@ -67,7 +67,7 @@ const certificatesList = [
   },
   {
     date: "August 2021",
-    name: "Algorithms Specialization",
+    name: "Algorithms Specialization Certificate",
     organization: "Stanford Online",
     credentialId: "NZSSRSYBF2F3",
     credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/NZSSRSYBF2F3",

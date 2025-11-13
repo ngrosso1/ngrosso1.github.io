@@ -10,6 +10,7 @@ import Contact from './Contact';
 import ProjectsList from './ProjectsList';
 import SwirlBackground from './SwirlBackground';
 import StatsSection from './StatsSection';
+import Skills from './skills';
 
 const App: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const App: React.FC = () => {
               <StatsSection />
               <ExperienceTabs />
               <FeaturedProjects />
+              <Skills />
             </div>
           } 
         />

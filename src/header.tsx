@@ -1,6 +1,7 @@
+// src/header.tsx
 import React from 'react';
 import './header.css';
-import { Link } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const splitLetters = (text: string) => {
   return text.split('').map((letter, idx) => (
@@ -12,24 +13,63 @@ const splitLetters = (text: string) => {
 };
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleClick = (e: React.MouseEvent, path: string) => {
+    e.preventDefault();
+    
+    console.log('Clicked:', path);
+    console.log('Current path:', location.pathname);
+    console.log('window.scrollY:', window.scrollY);
+    console.log('document.documentElement.scrollTop:', document.documentElement.scrollTop);
+    console.log('document.body.scrollTop:', document.body.scrollTop);
+    
+    if (location.pathname === path) {
+      // Same page - scroll to top
+      console.log('Scrolling to top...');
+      
+      // Try all possible scroll methods
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+      document.body.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      // Find and scroll the actual scrolling element
+      const scrollingElement = document.scrollingElement || document.documentElement;
+      scrollingElement.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Different page - navigate
+      console.log('Navigating to:', path);
+      navigate(path);
+    }
+  };
+
   return (
     <header className="header">
       <nav>
         <ul className="nav-links">
           <li>
-            <Link to="/">{splitLetters('Home')}</Link>
+            <a href="/" onClick={(e) => handleClick(e, '/')}>
+              {splitLetters('Home')}
+            </a>
           </li>
           {/*
           old About section
           <li>
-            <Link to="/about">{splitLetters('About')}</Link>
+            <a href="/about" onClick={(e) => handleClick(e, '/about')}>
+              {splitLetters('About')}
+            </a>
           </li>
           */}
           <li>
-            <Link to="/projects">{splitLetters('Projects')}</Link>
+            <a href="/projects" onClick={(e) => handleClick(e, '/projects')}>
+              {splitLetters('Projects')}
+            </a>
           </li>
           <li>
-            <Link to="/contact">{splitLetters('Contact')}</Link>
+            <a href="/contact" onClick={(e) => handleClick(e, '/contact')}>
+              {splitLetters('Contact')}
+            </a>
           </li>
         </ul>
       </nav>

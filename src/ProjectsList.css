@@ -79,5 +79,7 @@
 }
 
 .project-card .repo-link:hover {
-  background-color: #1d4ed8;
+  background-color: #2564eb7b;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
 }
