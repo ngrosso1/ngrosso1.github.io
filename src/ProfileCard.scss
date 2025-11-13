@@ -6,7 +6,6 @@ body {
   padding: 0;
 }
 
-/* Main profile card container */
 .profile-card {
   max-width: 800px;
   margin: 40px auto 20px auto;
@@ -28,7 +27,6 @@ body {
   }
 }
 
-/* Profile content layout */
 .profile-content {
   display: flex;
   align-items: flex-start;
@@ -48,7 +46,6 @@ body {
   }
 }
 
-/* Text and icon alignment */
 .text-info {
   display: flex;
   flex-direction: column;
@@ -66,9 +63,6 @@ body {
   }
 }
 
-/* ===== ANIMATED PROFILE PICTURE STYLES ===== */
-
-/* Container for the profile picture with animation */
 .profile-picture-container {
   position: relative;
   width: 220px;
@@ -92,7 +86,6 @@ body {
   }
 }
 
-/* Image wrapper */
 .image-wrapper {
   position: absolute;
   width: 100%;
@@ -169,8 +162,6 @@ body {
     stroke-dasharray: 30 26 92 63;
   }
 }
-
-/* ===== END ANIMATED STYLES ===== */
 
 h1 {
   font-size: 1.8em;
@@ -253,7 +244,6 @@ h1 {
   color: #61dafb;
 }
 
-/* Resume button styling - Neon Glowing Button */
 :root {
   --glow-color: hsl(143, 92%, 44%);
 }
@@ -456,19 +446,18 @@ h1 {
 }
 
 .wave {
-  display: inline-flex;         /* keeps it in-flow with text but a stable box */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.15em;                /* fixed box width relative to font-size */
-  height: 1.15em;               /* fixed box height */
-  line-height: 1;               /* no extra line spacing */
-  vertical-align: middle;       /* aligns with text baseline */
-  transform-origin: center center; /* rotate about the center of the box */
-  will-change: transform;       /* hint to browser for smoother animations */
+  width: 1.15em;
+  height: 1.15em;
+  line-height: 1;
+  vertical-align: middle;
+  transform-origin: center center;
+  will-change: transform;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  font-size: 1.6rem;            /* control visual size (adjust as needed) */
-  /* optional: prevents any margin/jump from subpixel rounding */
+  font-size: 1.6rem;
   box-sizing: content-box;
   padding: 0;
 
