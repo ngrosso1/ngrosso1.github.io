@@ -7,8 +7,8 @@ const fadeInOut = (t: number, m: number) => {
   return Math.abs((t + hm) % m - hm) / hm;
 };
 
-const bubbleCount = 100;
-const bubblePropCount = 7; // Wobble property
+const bubbleCount = 200;
+const bubblePropCount = 8; // Added fade threshold property
 const bubblePropsLength = bubbleCount * bubblePropCount;
 const baseSpeed = 0.15;
 const rangeSpeed = 0.35;
@@ -38,16 +38,44 @@ const BubblingBackground: React.FC = () => {
 
     const bubbleProps = new Float32Array(bubblePropsLength);
 
+    // Calculate fade height based on horizontal position
+    const getFadeHeight = (x: number, canvasWidth: number) => {
+      const normalizedX = x / canvasWidth;
+      const distanceFromCenter = Math.abs(normalizedX - 0.5);
+      
+      // INSANELY EXTREME valley effect
+      // Center: fade at 99.5% screen height (almost zero movement!)
+      // Edges: fade at -50% screen height (way way above screen!)
+      const centerFadePercent = 0.995;
+      const edgeFadePercent = -0.5;
+      
+      const fadePercent = centerFadePercent - (distanceFromCenter * 2) * (centerFadePercent - edgeFadePercent);
+      
+      return fadePercent;
+    };
+
     const initBubble = (i: number) => {
-      const x = rand(canvasA.width);
-      const y = canvasA.height + rand(50); // Starting at bottom of screen
+      let x = rand(canvasA.width);
+      
+      // MASSIVELY reduce spawn rate in center - 95% chance to re-roll if in center
+      const normalizedX = x / canvasA.width;
+      const distanceFromCenter = Math.abs(normalizedX - 0.5);
+      if (distanceFromCenter < 0.25 && random() < 0.95) {
+        // Re-roll to try for edge position
+        x = rand(canvasA.width);
+      }
+      
+      // All bubbles spawn at same spot now
+      const y = canvasA.height + rand(50);
+      
       const speed = baseSpeed + rand(rangeSpeed);
       const radius = baseRadius + rand(rangeRadius);
       const hue = baseHue + rand(rangeHue);
       const life = 0;
       const ttl = baseTTL + rand(rangeTTL);
+      const fadeThreshold = getFadeHeight(x, canvasA.width);
 
-      bubbleProps.set([x, y, speed, radius, hue, life, ttl], i);
+      bubbleProps.set([x, y, speed, radius, hue, life, ttl, fadeThreshold], i);
     };
 
     const drawBubble = (
@@ -56,16 +84,27 @@ const BubblingBackground: React.FC = () => {
       radius: number, 
       hue: number, 
       life: number, 
-      ttl: number
+      ttl: number,
+      fadeThreshold: number
     ) => {
-      // Fade out
+      const fadeHeight = canvasA.height * fadeThreshold;
+      
+      // Fade based on threshold
       let positionFade = 1;
-      if (y < canvasA.height * 0.01) {
-        positionFade = Math.max(0, y / (canvasA.height * 0.01));
+      if (y < fadeHeight) {
+        positionFade = 0; // Disappear at threshold
+      }
+      
+      // Also fade in from bottom
+      let bottomFade = 1;
+      if (y > canvasA.height - 100) {
+        bottomFade = Math.max(0, (canvasA.height - y) / 100);
       }
       
       const lifeFade = fadeInOut(life, ttl);
-      const opacity = lifeFade * positionFade;
+      const opacity = lifeFade * positionFade * bottomFade;
+      
+      if (opacity < 0.01) return;
       
       ctxA.save();
       ctxA.beginPath();
@@ -86,7 +125,7 @@ const BubblingBackground: React.FC = () => {
 
     const updateBubble = (i: number) => {
       const i2 = 1 + i, i3 = 2 + i, i4 = 3 + i, i5 = 4 + i;
-      const i6 = 5 + i, i7 = 6 + i;
+      const i6 = 5 + i, i7 = 6 + i, i8 = 7 + i;
 
       let x = bubbleProps[i];
       let y = bubbleProps[i2];
@@ -95,11 +134,12 @@ const BubblingBackground: React.FC = () => {
       const hue = bubbleProps[i5];
       let life = bubbleProps[i6];
       const ttl = bubbleProps[i7];
+      const fadeThreshold = bubbleProps[i8];
 
       // Upward movement
       y -= speed;
 
-      drawBubble(x, y, radius, hue, life, ttl);
+      drawBubble(x, y, radius, hue, life, ttl, fadeThreshold);
 
       life++;
 
@@ -107,8 +147,11 @@ const BubblingBackground: React.FC = () => {
       bubbleProps[i2] = y;
       bubbleProps[i6] = life;
 
-      // Reset bubble if it goes off screen or exceeds ttl
-      if (y < -radius || x < -radius || x > canvasA.width + radius || life > ttl) {
+      // Reset bubble based on its specific fade threshold
+      const fadeHeight = canvasA.height * fadeThreshold;
+      const resetHeight = fadeHeight - (fadeHeight * 0.3);
+      
+      if (y < resetHeight || x < -radius || x > canvasA.width + radius || life > ttl) {
         initBubble(i);
       }
     };

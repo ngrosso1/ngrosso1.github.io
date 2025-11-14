@@ -3,6 +3,42 @@ import React from 'react';
 import './header.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 
+// Add this style override for mobile
+const mobileHeaderStyle = `
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: row !important;
+      align-items: center !important;
+    }
+    
+    .nav-links li {
+      margin: 0 !important;
+    }
+    
+    .header {
+      padding: 10px 15px !important;
+      min-width: auto !important;
+      width: auto !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      padding: 8px 12px !important;
+    }
+  }
+`;
+
+// Inject the style
+if (typeof document !== 'undefined') {
+  const styleTag = document.createElement('style');
+  styleTag.innerHTML = mobileHeaderStyle;
+  if (!document.head.querySelector('style[data-mobile-header-fix]')) {
+    styleTag.setAttribute('data-mobile-header-fix', 'true');
+    document.head.appendChild(styleTag);
+  }
+}
+
 const splitLetters = (text: string) => {
   return text.split('').map((letter, idx) => (
     <span className="letter" style={{ '--i': idx } as React.CSSProperties} key={idx}>
