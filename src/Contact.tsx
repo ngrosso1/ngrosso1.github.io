@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
       <div className="contact-info-display">
         <div className="contact-item">
           <span>📧 Email: </span>
-          <a href="mailto:nicholasj.grosso@gmail.com">nicholasj.grosso@gmail.com</a>
+          <a href="mailto:nicholasj.grosso@gmail.com">Nicholasj.grosso@gmail.com</a>
         </div>
         <div className="contact-item">
           <span>📞 Phone: </span>

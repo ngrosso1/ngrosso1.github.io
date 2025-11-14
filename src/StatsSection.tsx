@@ -54,82 +54,145 @@ const StatsSection: React.FC = () => {
   }, [isVisible]);
 
   return (
-    <section style={{
-      width: '100%',
-      maxWidth: '750px',
-      margin: '3rem auto',
-      padding: '0 1rem',
-      position: 'relative',
-      zIndex: 10
-    }}>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        gap: '2rem',
-        justifyItems: 'center'
-      }}>
-        {stats.map((stat, index) => {
-          const isDesktop = typeof window !== 'undefined' && window.innerWidth >= 1280;
-          const shouldBlur = hoveredIndex !== null && hoveredIndex !== index;
-          
-          return (
-            <div 
-              key={index}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '0.75rem',
-                gridColumn: isDesktop ? 'auto' : 'auto',
-                width: '100%',
-                padding: '0.5rem',
-                cursor: 'pointer',
-                opacity: shouldBlur ? 0.3 : isVisible ? 1 : 0,
-                filter: shouldBlur ? 'blur(5px)' : isVisible ? 'blur(0px)' : 'blur(10px)',
-                transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-                transition: shouldBlur 
-                  ? 'opacity 0.5s ease-out, filter 0.5s ease-out' 
-                  : 'opacity 0.7s ease-out, filter 0.7s ease-out, transform 0.7s ease-out',
-                transitionDelay: shouldBlur ? '0ms' : `${index * 150}ms`
-              }}
-            >
-              <span style={{
-                fontSize: window.innerWidth >= 1280 ? '3.5rem' : window.innerWidth >= 768 ? '2.5rem' : '2rem',
-                fontWeight: 800,
-                color: '#ffffff',
-                lineHeight: 1,
-                textShadow: '0 0 20px rgba(255, 255, 255, 0.3)',
-                flexShrink: 0
-              }}>
-                {counts[index]}
-              </span>
-              <p style={{
-                fontSize: window.innerWidth >= 1280 ? '0.875rem' : '0.7rem',
-                color: 'rgba(255, 255, 255, 0.7)',
-                fontFamily: 'monospace',
-                lineHeight: 1.3,
-                maxWidth: window.innerWidth >= 1280 ? '120px' : '80px',
-                margin: 0,
-                textAlign: 'left',
-                wordWrap: 'break-word'
-              }}>
-                {stat.label}
-              </p>
-            </div>
-          );
-        })}
-      </div>
+    <>
       <style>{`
+        .stats-section {
+          width: 100%;
+          max-width: 1200px;
+          margin: 3rem auto;
+          padding: 0 1rem;
+          position: relative;
+          z-index: 10;
+          box-sizing: border-box;
+        }
+
+        .stats-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+          justify-items: center;
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
+        .stat-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.75rem;
+          width: 100%;
+          padding: 0.5rem;
+          cursor: pointer;
+          transition: opacity 0.5s ease-out, filter 0.5s ease-out, transform 0.7s ease-out;
+        }
+
+        .stat-item.visible {
+          opacity: 1;
+          filter: blur(0px);
+          transform: translateY(0);
+        }
+
+        .stat-item.hidden {
+          opacity: 0;
+          filter: blur(10px);
+          transform: translateY(20px);
+        }
+
+        .stat-item.blurred {
+          opacity: 0.3;
+          filter: blur(5px);
+        }
+
+        .stat-number {
+          font-size: 2rem;
+          font-weight: 800;
+          color: #ffffff;
+          line-height: 1;
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+          flex-shrink: 0;
+        }
+
+        .stat-label {
+          font-size: 0.7rem;
+          color: rgba(255, 255, 255, 0.7);
+          font-family: monospace;
+          line-height: 1.3;
+          max-width: 80px;
+          margin: 0;
+          text-align: left;
+          word-wrap: break-word;
+        }
+
+        @media (min-width: 768px) {
+          .stats-grid {
+            gap: 2rem;
+            max-width: 700px;
+          }
+
+          .stat-number {
+            font-size: 2.5rem;
+          }
+
+          .stat-label {
+            font-size: 0.75rem;
+            max-width: 100px;
+          }
+        }
+
         @media (min-width: 1280px) {
-          section > div {
-            grid-template-columns: repeat(4, 1fr) !important;
-            gap: 1.5rem !important;
+          .stats-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1000px;
+          }
+
+          .stat-number {
+            font-size: 3.5rem;
+          }
+
+          .stat-label {
+            font-size: 0.875rem;
+            max-width: 120px;
           }
         }
       `}</style>
-    </section>
+
+      <section className="stats-section">
+        <div className="stats-grid">
+          {stats.map((stat, index) => {
+            const shouldBlur = hoveredIndex !== null && hoveredIndex !== index;
+            let className = 'stat-item ';
+            if (shouldBlur) {
+              className += 'blurred';
+            } else if (isVisible) {
+              className += 'visible';
+            } else {
+              className += 'hidden';
+            }
+
+            return (
+              <div 
+                key={index}
+                className={className}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                style={{
+                  transitionDelay: shouldBlur ? '0ms' : `${index * 150}ms`
+                }}
+              >
+                <span className="stat-number">
+                  {counts[index]}
+                </span>
+                <p className="stat-label">
+                  {stat.label}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    </>
   );
 };
 

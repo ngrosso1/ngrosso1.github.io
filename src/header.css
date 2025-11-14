@@ -66,14 +66,14 @@ body {
 }
 
 .letter .front {
-  color: #c4c2c2;
+  color: #c2c4c3;
 }
 
 .letter .back {
   position: absolute;
   left: 0;
   top: 100%;
-  color: #00ff6a;
+  color: #6bbf8d;
 }
 
 .nav-links a:hover .letter .front,

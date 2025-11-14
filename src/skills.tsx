@@ -25,7 +25,7 @@ const SkillsSection: React.FC = () => {
     {
       title: 'Front End',
       skills: [
-        { name: 'TypeScript', icon: 'https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/5/typescript-icon-round-to2r7ctaodkd8o2drz0wsr.png/typescript-icon-round-1v1u40zhwzqebjcth7f50p.png?_a=DATAg1AAZAA0', framed: false },
+        { name: 'TypeScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png', framed: false },
         { name: 'JavaScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', framed: false },
         { name: 'Angular', icon: 'https://images.seeklogo.com/logo-png/33/2/angular-logo-png_seeklogo-331629.png', framed: false },
         { name: 'Node.js', icon: 'https://images.icon-icons.com/2699/PNG/512/nodejs_logo_icon_169910.png', framed: false },
@@ -40,7 +40,8 @@ const SkillsSection: React.FC = () => {
         { name: 'Python', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png', framed: false },
         { name: 'C#', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1820px-Logo_C_sharp.svg.png', framed: false },
         { name: 'Java', icon: 'https://cdn-icons-png.flaticon.com/512/226/226777.png', framed: false },
-        { name: 'Rust', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rustacean-orig-noshadow.svg/1200px-Rustacean-orig-noshadow.svg.png', framed: false }
+        { name: 'Rust', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rustacean-orig-noshadow.svg/1200px-Rustacean-orig-noshadow.svg.png', framed: false },
+        { name: 'Perl', icon: 'https://www.freelogovectors.net/wp-content/uploads/2021/02/perl_logo_freelogovectors.net_.png', framed: false },
       ],
     },
     {
@@ -65,7 +66,10 @@ const SkillsSection: React.FC = () => {
     },
     {
       title: 'Miscellaneous',
-      skills: [],
+      skills: [
+        // { name: '', icon: '', framed: false },
+        { name: '', icon: '', framed: false },
+      ],
     },
   ];
 

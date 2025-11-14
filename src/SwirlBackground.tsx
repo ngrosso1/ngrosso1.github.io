@@ -7,7 +7,8 @@ const fadeInOut = (t: number, m: number) => {
   return Math.abs((t + hm) % m - hm) / hm;
 };
 
-const bubbleCount = 200;
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+const bubbleCount = isMobile ? 20 : 65; // 80% reduction for mobile
 const bubblePropCount = 8; // Added fade threshold property
 const bubblePropsLength = bubbleCount * bubblePropCount;
 const baseSpeed = 0.15;
@@ -43,11 +44,11 @@ const BubblingBackground: React.FC = () => {
       const normalizedX = x / canvasWidth;
       const distanceFromCenter = Math.abs(normalizedX - 0.5);
       
-      // INSANELY EXTREME valley effect
-      // Center: fade at 99.5% screen height (almost zero movement!)
-      // Edges: fade at -50% screen height (way way above screen!)
-      const centerFadePercent = 0.995;
-      const edgeFadePercent = -0.5;
+      // Move the V curve down a bit more
+      // Center: fade at 90% screen height (stay in bottom 10%)
+      // Edges: fade at 25% screen height (can rise to 75% up the screen)
+      const centerFadePercent = 0.90;
+      const edgeFadePercent = 0.25;
       
       const fadePercent = centerFadePercent - (distanceFromCenter * 2) * (centerFadePercent - edgeFadePercent);
       
@@ -89,20 +90,18 @@ const BubblingBackground: React.FC = () => {
     ) => {
       const fadeHeight = canvasA.height * fadeThreshold;
       
-      // Fade based on threshold
+      // Fade OUT as bubbles approach the line from below
       let positionFade = 1;
-      if (y < fadeHeight) {
-        positionFade = 0; // Disappear at threshold
-      }
+      const fadeRange = 150; // Start fading 150px before the line
+      const distanceFromLine = y - fadeHeight;
       
-      // Also fade in from bottom
-      let bottomFade = 1;
-      if (y > canvasA.height - 100) {
-        bottomFade = Math.max(0, (canvasA.height - y) / 100);
+      if (distanceFromLine < fadeRange) {
+        // Approaching or past the line - fade out
+        positionFade = Math.max(0, distanceFromLine / fadeRange);
       }
       
       const lifeFade = fadeInOut(life, ttl);
-      const opacity = lifeFade * positionFade * bottomFade;
+      const opacity = lifeFade * positionFade;
       
       if (opacity < 0.01) return;
       
