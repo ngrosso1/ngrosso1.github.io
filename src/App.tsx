@@ -8,7 +8,7 @@ import FeaturedProjects from './FeaturedProjects';
 import About from './About';
 import Contact from './Contact';
 import ProjectsList from './ProjectsList';
-import SwirlBackground from './SwirlBackground';
+import SwirlBackground from './bubbleBackground';
 import StatsSection from './StatsSection';
 import Skills from './skills';
 
