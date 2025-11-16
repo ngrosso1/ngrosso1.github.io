@@ -1,25 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.9c8f9a40.css",
-    "main.js": "/static/js/main.98ee4cff.js",
+    "main.css": "/static/css/main.6d45f405.css",
+    "main.js": "/static/js/main.733292d2.js",
     "static/js/453.32d81922.chunk.js": "/static/js/453.32d81922.chunk.js",
     "static/media/vfioh.gif": "/static/media/vfioh.1d1ea75941917fee8f83.gif",
     "static/media/wordleclone.gif": "/static/media/wordleclone.9853c860bf3bfb48c85f.gif",
     "static/media/task.gif": "/static/media/task.a4da8cf818f2c450633e.gif",
     "static/media/c4.gif": "/static/media/c4.2a6a19f88b7f57e2a976.gif",
     "static/media/insta.gif": "/static/media/insta.f5e90fa5dc9867ae50e6.gif",
+    "static/media/esurgi.png": "/static/media/esurgi.d9afb06f386e9e07b43a.png",
     "static/media/grosso.png": "/static/media/grosso.857bb57c8de72b7cc8d8.png",
-    "static/media/esurgi.png": "/static/media/esurgi.22101d1d8fd7ca456919.png",
-    "static/media/binghamton.png": "/static/media/binghamton.bda411928e4684107315.png",
-    "static/media/atnt.png": "/static/media/atnt.5565274bc8284434940b.png",
-    "static/media/stanford.png": "/static/media/stanford.171e7e9125bd52f3c0a3.png",
     "index.html": "/index.html",
-    "main.9c8f9a40.css.map": "/static/css/main.9c8f9a40.css.map",
-    "main.98ee4cff.js.map": "/static/js/main.98ee4cff.js.map",
+    "main.6d45f405.css.map": "/static/css/main.6d45f405.css.map",
+    "main.733292d2.js.map": "/static/js/main.733292d2.js.map",
     "453.32d81922.chunk.js.map": "/static/js/453.32d81922.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c8f9a40.css",
-    "static/js/main.98ee4cff.js"
+    "static/css/main.6d45f405.css",
+    "static/js/main.733292d2.js"
   ]
 }
