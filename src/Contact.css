@@ -151,14 +151,13 @@ textarea {
     flex-shrink: 1;
   }
 
-  /* Prevent 5-line issue */
   .contact-info-display a {
     display: block;
     white-space: nowrap;
     font-size: clamp(0.85rem, 4vw, 1rem);
   }
   .contact-info-display .contact-item + .contact-item {
-    margin-top: 1rem; /* adjust as needed */
+    margin-top: 1rem;
   }
 }
 

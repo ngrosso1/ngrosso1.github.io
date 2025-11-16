@@ -3,7 +3,6 @@ import React from 'react';
 import './header.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-// Add this style override for mobile
 const mobileHeaderStyle = `
   @media (max-width: 768px) {
     .nav-links {
@@ -29,7 +28,6 @@ const mobileHeaderStyle = `
   }
 `;
 
-// Inject the style
 if (typeof document !== 'undefined') {
   const styleTag = document.createElement('style');
   styleTag.innerHTML = mobileHeaderStyle;
@@ -62,19 +60,15 @@ const Header: React.FC = () => {
     console.log('document.body.scrollTop:', document.body.scrollTop);
     
     if (location.pathname === path) {
-      // Same page - scroll to top
       console.log('Scrolling to top...');
       
-      // Try all possible scroll methods
       window.scrollTo({ top: 0, behavior: 'smooth' });
       document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
       document.body.scrollTo({ top: 0, behavior: 'smooth' });
       
-      // Find and scroll the actual scrolling element
       const scrollingElement = document.scrollingElement || document.documentElement;
       scrollingElement.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      // Different page - navigate
       console.log('Navigating to:', path);
       navigate(path);
     }
@@ -90,6 +84,7 @@ const Header: React.FC = () => {
             </a>
           </li>
           {/*
+          TODO: NEED TO REUSE ASSET
           old About section
           <li>
             <a href="/about" onClick={(e) => handleClick(e, '/about')}>

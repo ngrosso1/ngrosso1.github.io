@@ -87,7 +87,7 @@ body {
   .profile-picture-container {
     width: 120px;
     height: 120px;
-    position: relative; /* override absolute for mobile */
+    position: relative;
     margin-top:25px;
   }
 }
@@ -245,7 +245,7 @@ h1 {
               0px 0px 0.5em 0px var(--glow-color);
 }
 
-/* @media (max-width: 768px) { .button-85 { margin-top: 4px; } } */
+@media (max-width: 768px) { .button-85 { padding: 0.3em 0.9em; font-size: 0.8em; } }
 @media (max-width: 480px) { .button-85 { padding: 0.3em 0.8em; font-size: 0.75em; } }
 @media (max-width: 320px) { .button-85 { padding: 0.3em 0.6em; font-size: 0.7em; } }
 

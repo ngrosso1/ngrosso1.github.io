@@ -105,13 +105,11 @@
   transition: all 0.3s ease;
 }
 
-/* Framed icons - circular background */
 .skill-icon.framed {
   border-radius: 50%;
   background: #e5e7eb;
 }
 
-/* No frame - just the image */
 .skill-icon.no-frame {
   background: transparent;
 }
@@ -141,12 +139,10 @@
   object-fit: contain;
 }
 
-/* Framed images should have padding */
 .skill-icon.framed .skill-img {
   padding: 8px;
 }
 
-/* No frame images fill the entire space */
 .skill-icon.no-frame .skill-img {
   padding: 0;
 }
@@ -171,8 +167,6 @@
   color: #6b7280 !important;
   font-style: italic;
 }
-
-/* Responsive Design */
 
 @media (max-width: 768px) {
   .skills-section {

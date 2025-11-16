@@ -8,8 +8,8 @@ const fadeInOut = (t: number, m: number) => {
 };
 
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-const bubbleCount = isMobile ? 20 : 65; // 80% reduction for mobile
-const bubblePropCount = 8; // Added fade threshold property
+const bubbleCount = isMobile ? 20 : 65;
+const bubblePropCount = 8;
 const bubblePropsLength = bubbleCount * bubblePropCount;
 const baseSpeed = 0.15;
 const rangeSpeed = 0.35;
@@ -39,14 +39,10 @@ const BubblingBackground: React.FC = () => {
 
     const bubbleProps = new Float32Array(bubblePropsLength);
 
-    // Calculate fade height based on horizontal position
     const getFadeHeight = (x: number, canvasWidth: number) => {
       const normalizedX = x / canvasWidth;
       const distanceFromCenter = Math.abs(normalizedX - 0.5);
       
-      // Move the V curve down a bit more
-      // Center: fade at 90% screen height (stay in bottom 10%)
-      // Edges: fade at 25% screen height (can rise to 75% up the screen)
       const centerFadePercent = 0.90;
       const edgeFadePercent = 0.25;
       
@@ -58,15 +54,12 @@ const BubblingBackground: React.FC = () => {
     const initBubble = (i: number) => {
       let x = rand(canvasA.width);
       
-      // MASSIVELY reduce spawn rate in center - 95% chance to re-roll if in center
       const normalizedX = x / canvasA.width;
       const distanceFromCenter = Math.abs(normalizedX - 0.5);
       if (distanceFromCenter < 0.25 && random() < 0.95) {
-        // Re-roll to try for edge position
         x = rand(canvasA.width);
       }
       
-      // All bubbles spawn at same spot now
       const y = canvasA.height + rand(50);
       
       const speed = baseSpeed + rand(rangeSpeed);
@@ -90,13 +83,11 @@ const BubblingBackground: React.FC = () => {
     ) => {
       const fadeHeight = canvasA.height * fadeThreshold;
       
-      // Fade OUT as bubbles approach the line from below
       let positionFade = 1;
-      const fadeRange = 150; // Start fading 150px before the line
+      const fadeRange = 150;
       const distanceFromLine = y - fadeHeight;
       
       if (distanceFromLine < fadeRange) {
-        // Approaching or past the line - fade out
         positionFade = Math.max(0, distanceFromLine / fadeRange);
       }
       
@@ -146,7 +137,6 @@ const BubblingBackground: React.FC = () => {
       bubbleProps[i2] = y;
       bubbleProps[i6] = life;
 
-      // Reset bubble based on its specific fade threshold
       const fadeHeight = canvasA.height * fadeThreshold;
       const resetHeight = fadeHeight - (fadeHeight * 0.3);
       

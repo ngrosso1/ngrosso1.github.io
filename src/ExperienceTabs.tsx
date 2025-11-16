@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import './ExperienceTabs.css';
-import lumenLogo from './logos/lumen.png';
 import esurgiLogo from './logos/esurgi.png';
-import atntLogo from './logos/atnt.png';
-import binghamton from './logos/binghamton.png';
-import stanford from './logos/stanford.png';
 
 const workExperience = [
   {
@@ -19,7 +15,7 @@ const workExperience = [
       "Defined and documented production network standards",
       "Collaborated across teams for architectural alignment"
     ],
-    logo: lumenLogo,
+    logo: 'https://images.seeklogo.com/logo-png/40/1/lumen-technologies-logo-png_seeklogo-405795.png',
   },
   {
     date: "July 2021 - Jan 2022",
@@ -45,7 +41,7 @@ const workExperience = [
       "Developed communication and leadership skills",
       "Gained insights into large-scale digital transformation"
     ],
-    logo: atntLogo,
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/AT%26T_Globe_2016.svg',
   },
 ];
 
@@ -54,7 +50,7 @@ const educationList = [
     date: "Aug 2019 - Dec 2021",
     company: "Binghamton University",
     role: "Computer Science",
-    logo: binghamton,
+    logo: 'https://cdn.campus360.org/uploads/universities/1609904622bec1ad321e3082af7edf9043dffa09a4.png',
   }
 ];
 
@@ -73,7 +69,7 @@ const certificatesList = [
     organization: "Stanford Online",
     credentialId: "NZSSRSYBF2F3",
     credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/NZSSRSYBF2F3",
-    logo: stanford,
+    logo: 'https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png',
   }
 ];
 
@@ -100,21 +96,19 @@ export default function ExperienceTabs() {
           <div>
             {workExperience.map((item, index) => (
               <div key={index} style={{ marginBottom: index < workExperience.length - 1 ? '32px' : 0 }}>
-                {/* Logo - Centered at top */}
                 <div style={{ textAlign: 'center', marginBottom: '16px' }}>
                   <img 
                     src={item.logo} 
                     alt={`${item.company} logo`} 
                     className="company-logo"
                     style={{
-                      width: '80px',
-                      height: '80px',
+                      width: '100px',
+                      height: '100px',
                       margin: '0 auto'
                     }}
                   />
                 </div>
 
-                {/* Header Info */}
                 <div style={{ textAlign: 'center', marginBottom: '16px' }}>
                   <h3 style={{ 
                     margin: '0 0 4px 0', 
@@ -140,7 +134,6 @@ export default function ExperienceTabs() {
                   </p>
                 </div>
 
-                {/* Overview */}
                 <div style={{ marginBottom: '16px' }}>
                   <p style={{ 
                     color: '#ffffff', 
@@ -152,7 +145,6 @@ export default function ExperienceTabs() {
                   </p>
                 </div>
 
-                {/* Technologies */}
                 <div style={{ marginBottom: '16px' }}>
                   <h4 style={{ 
                     color: '#ffffff', 
@@ -181,7 +173,6 @@ export default function ExperienceTabs() {
                   </div>
                 </div>
 
-                {/* Key Achievements */}
                 <div>
                   <h4 style={{ 
                     color: '#ffffff', 
@@ -216,7 +207,6 @@ export default function ExperienceTabs() {
                   </ul>
                 </div>
 
-                {/* Divider between experiences */}
                 {index < workExperience.length - 1 && (
                   <div className="section-divider" style={{ margin: '24px 0' }}></div>
                 )}
@@ -225,7 +215,6 @@ export default function ExperienceTabs() {
           </div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            {/* Academic Section */}
             <div>
               <h2 className="section-title">Academic</h2>
               <ul className="experience-list">
@@ -244,7 +233,6 @@ export default function ExperienceTabs() {
 
             <div className="section-divider"></div>
 
-            {/* Certificates Section */}
             <div>
               <h2 className="section-title">Certificates</h2>
               <ul className="experience-list">

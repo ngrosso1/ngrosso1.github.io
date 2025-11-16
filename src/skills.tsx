@@ -67,7 +67,7 @@ const SkillsSection: React.FC = () => {
     {
       title: 'Miscellaneous',
       skills: [
-        // { name: '', icon: '', framed: false },
+        // Template: { name: '', icon: '', framed: false },
         { name: '', icon: '', framed: false },
       ],
     },

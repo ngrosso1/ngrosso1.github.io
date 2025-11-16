@@ -29,7 +29,6 @@ const ProfileCard: React.FC = () => {
             </a>
           </div>
           </div>
-        {/* Animated Profile Picture Container */}
         <div className="profile-picture-container">
           <div className="image-wrapper">
             <img
@@ -39,7 +38,6 @@ const ProfileCard: React.FC = () => {
             />
           </div>
           
-          {/* Animated SVG Circle */}
           <div className="svg-container">
             <svg 
               fill="transparent" 
