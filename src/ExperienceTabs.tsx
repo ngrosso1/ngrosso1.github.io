@@ -22,7 +22,7 @@ const workExperience = [
     company: "Esurgi BioTech",
     role: "Software Engineering Intern",
     overview: "Led driver code development for medical device pump mechanism, collaborating with software and hardware teams.",
-    technologies: ["C++", "Swift", "AT Commands", "Git", "Arduino IDE"],
+    technologies: ["C++", "Swift", "AT Commands", "Git", "Arduino", "OSX", "Bash"],
     achievements: [
       "Implemented Bluetooth communication between Arduino controller and iOS app",
       "Enabled reliable real-time data exchange and device control",

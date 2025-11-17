@@ -62,6 +62,7 @@ const SkillsSection: React.FC = () => {
         { name: 'Terraform', icon: 'https://blogs.vmware.com/cloudprovider/wp-content/uploads/sites/78/2019/04/og-image-8b3e4f7d-blog-aspect-ratio.png?w=576&h=324&crop=1', framed: false },
         { name: 'Kubernetes', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/00/Kubernetes_%28container_engine%29.png', framed: false },
         { name: 'Docker', icon: 'https://i0.wp.com/blog.kmsigma.com/wp-content/uploads/2025/07/docker-mark-blue-scaled.png?fit=2560%2C2021&ssl=1', framed: false },
+        { name: 'Redshift', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Amazon-Redshift-Logo.svg/1862px-Amazon-Redshift-Logo.svg.png', framed: false },
       ],
     },
     {
