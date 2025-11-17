@@ -51,7 +51,8 @@ const SkillsSection: React.FC = () => {
         { name: 'NoSQL', icon: 'https://cpl.thalesgroup.com/sites/default/files/inline-images/nosql%20databases.png', framed: false },
         { name: 'GraphQL', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png', framed: false },
         { name: 'MongoDB', icon: 'https://logo.svgcdn.com/devicon/mongodb-original.png', framed: false},
-        { name: 'DynamoDB', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/DynamoDB.png', framed: false}
+        { name: 'DynamoDB', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/DynamoDB.png', framed: false},
+        { name: 'Elasticsearch', icon: 'https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/3/elasticsearch-rhi1c3ieeke9l2ht6jy755.png/elasticsearch-a2ax512pgkubl5gtrelkoc.png?_a=DATAg1AAZAA0', framed: false },
       ],
     },
     {
@@ -69,7 +70,9 @@ const SkillsSection: React.FC = () => {
       title: 'Miscellaneous',
       skills: [
         // Template: { name: '', icon: '', framed: false },
-        { name: '', icon: '', framed: false },
+        { name: 'Jenkins', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1483px-Jenkins_logo.svg.png', framed: false },
+        { name: 'Git', icon: 'https://avatars.githubusercontent.com/u/18133?s=280&v=4', framed: false },
+        { name: 'Linux', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/330px-Tux.svg.png', framed: false },
       ],
     },
   ];

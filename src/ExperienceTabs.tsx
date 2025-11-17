@@ -7,20 +7,20 @@ const workExperience = [
     date: "May 2022 - Nov 2025",
     company: "Lumen Technologies",
     role: "Software Engineer II",
-    overview: "Led development and maintenance of Vyvx Broadcast Solutions, a global platform supporting live and linear media delivery.",
-    technologies: ["C++", "GoLang", "JavaScript", "C#", "Python", "SQL", "Perl", "Docker", "Kubernetes", "Rancher", "PowerBuilder", "ASP.NET"],
+    overview: "Led development and maintenance of Vyvx Broadcast Solutions, a global platform supporting live and linear media delivery. Took primary ownership of critical systems including Harvester, a Golang-based network monitoring service, and Atlas, an automated equipment reservation management system.",
+    technologies: ["C++", "Go", "JavaScript", "C#", "Python", "SQL", "Perl", "Docker", "Kubernetes", "Rancher", "PowerBuilder", "ASP.NET"],
     achievements: [
-      "Developed broadcast encoding and resilient media transport systems",
-      "Designed solutions improving automation, scalability, and reliability",
-      "Defined and documented production network standards",
-      "Collaborated across teams for architectural alignment"
+      "Engineered broadcast encoding and resilient media transport systems increasing reliability and scalability",
+      "Primary maintainer of Harvester for SNMP traps, equipment queries, and customer notifications; resolved complex production issues and managed Docker-based development environments",
+      "Maintained Atlas system automating start/stop of equipment reservations, improving operational efficiency and troubleshooting capabilities",
+      "Collaborated cross-functionally to define production network standards and align architectural efforts"
     ],
-    logo: 'https://images.seeklogo.com/logo-png/40/1/lumen-technologies-logo-png_seeklogo-405795.png',
+    logo: "https://images.seeklogo.com/logo-png/40/1/lumen-technologies-logo-png_seeklogo-405795.png"
   },
   {
     date: "July 2021 - Jan 2022",
-    company: "Esurgi BioTech",
-    role: "Software Engineering Intern",
+    company: "EsurgiBioTech",
+    role: "Software Engineer Intern",
     overview: "Led driver code development for medical device pump mechanism, collaborating with software and hardware teams.",
     technologies: ["C++", "Swift", "AT Commands", "Git", "Arduino", "OSX", "Bash"],
     achievements: [
@@ -33,7 +33,7 @@ const workExperience = [
   {
     date: "May 2021 - Aug 2021",
     company: "AT&T",
-    role: "Software Engineering Extern",
+    role: "Software Engineer Extern",
     overview: "Completed 80-hour virtual program strengthening technical and professional skills through AT&T's Summer Learning Academy.",
     technologies: ["AI", "Cloud Computing", "IoT", "Cybersecurity", "Game Design"],
     achievements: [
