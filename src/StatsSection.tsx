@@ -10,7 +10,7 @@ const StatsSection: React.FC = () => {
 
   const stats = [
     { value: age, label: 'Age' },
-    { value: 4, label: 'Years of experience' },
+    { value: 6, label: 'Years of experience' },
     { value: 16, label: 'Projects worked on' },
     { value: 8, label: 'Projects Deployed' }
   ];

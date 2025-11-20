@@ -20,6 +20,7 @@ const isImage = (icon: string) =>
   icon.endsWith(".jpg") ||
   icon.endsWith(".webp");
 
+// Template: { name: '', icon: '', framed: false },
 const SkillsSection: React.FC = () => {
   const categories: SkillCategory[] = [
     {
@@ -28,8 +29,9 @@ const SkillsSection: React.FC = () => {
         { name: 'TypeScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png', framed: false },
         { name: 'JavaScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', framed: false },
         { name: 'Angular', icon: 'https://images.seeklogo.com/logo-png/33/2/angular-logo-png_seeklogo-331629.png', framed: false },
-        { name: 'Node.js', icon: 'https://images.icon-icons.com/2699/PNG/512/nodejs_logo_icon_169910.png', framed: false },
+        { name: 'NodeJS', icon: 'https://images.icon-icons.com/2699/PNG/512/nodejs_logo_icon_169910.png', framed: false },
         { name: 'React', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png', framed: false },
+        { name: 'HTML/CSS', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/2560px-CSS3_and_HTML5_logos_and_wordmarks.svg.png', framed: false },
       ],
     },
     {
@@ -42,12 +44,14 @@ const SkillsSection: React.FC = () => {
         { name: 'Java', icon: 'https://cdn-icons-png.flaticon.com/512/226/226777.png', framed: false },
         { name: 'Rust', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rustacean-orig-noshadow.svg/1200px-Rustacean-orig-noshadow.svg.png', framed: false },
         { name: 'Perl', icon: 'https://www.freelogovectors.net/wp-content/uploads/2021/02/perl_logo_freelogovectors.net_.png', framed: false },
+        { name: 'Swift', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968371.png', framed: false },
+        { name: 'Bash', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/2048px-Bash_Logo_Colored.svg.png', framed: false },
       ],
     },
     {
       title: 'Data Analysis',
       skills: [
-        { name: 'SQL', icon: 'https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-29.png', framed: false },
+        { name: 'SQL', icon: 'https://img.icons8.com/color/512/microsoft-sql-server.png', framed: false }, //OLD LOGO: https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-29.png
         { name: 'NoSQL', icon: 'https://cpl.thalesgroup.com/sites/default/files/inline-images/nosql%20databases.png', framed: false },
         { name: 'GraphQL', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png', framed: false },
         { name: 'MongoDB', icon: 'https://logo.svgcdn.com/devicon/mongodb-original.png', framed: false},
@@ -69,10 +73,11 @@ const SkillsSection: React.FC = () => {
     {
       title: 'Miscellaneous',
       skills: [
-        // Template: { name: '', icon: '', framed: false },
+        { name: 'Debian Linux', icon: 'https://www.debian.org/Pics/debian-logo-1024x576.png', framed: false },
+        { name: 'RHEL', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Red_Hat_logo.svg/1280px-Red_Hat_logo.svg.png', framed: false },
+        { name: 'Arch Linux', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Arch_Linux_%22Crystal%22_icon.svg/2048px-Arch_Linux_%22Crystal%22_icon.svg.png', framed: false },
         { name: 'Jenkins', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1483px-Jenkins_logo.svg.png', framed: false },
         { name: 'Git', icon: 'https://avatars.githubusercontent.com/u/18133?s=280&v=4', framed: false },
-        { name: 'Linux', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/330px-Tux.svg.png', framed: false },
       ],
     },
   ];
