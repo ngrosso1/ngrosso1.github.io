@@ -1,10 +1,8 @@
 // src/FeaturedProjects.tsx
 import React from 'react';
 import './FeaturedProjects.css';
-import c4 from "./logos/c4.gif"
 import wordle from "./logos/wordleclone.gif"
 import task from "./logos/task.gif"
-import insta from "./logos/insta.gif"
 import vfioh from "./logos/vfioh.gif"
 
 interface Project {

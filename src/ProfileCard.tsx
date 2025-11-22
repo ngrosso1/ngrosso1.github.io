@@ -16,7 +16,7 @@ const ProfileCard: React.FC = () => {
           </p>
           <div className="social-section">
             <a href="https://drive.google.com/file/d/1za1qE7yvZeFML-o72zC62SIEohcrTPWu/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="button-wrapper">
-              <button className="button-85" role="button">Resume</button>
+              <button className="button-85">Resume</button>
             </a>
             <a href="mailto:nicholasj.grosso@gmail.com">
               <IoMail className="icon" />
