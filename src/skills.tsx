@@ -68,6 +68,7 @@ const SkillsSection: React.FC = () => {
         { name: 'Kubernetes', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/00/Kubernetes_%28container_engine%29.png', framed: false },
         { name: 'Docker', icon: 'https://i0.wp.com/blog.kmsigma.com/wp-content/uploads/2025/07/docker-mark-blue-scaled.png?fit=2560%2C2021&ssl=1', framed: false },
         { name: 'Redshift', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Amazon-Redshift-Logo.svg/1862px-Amazon-Redshift-Logo.svg.png', framed: false },
+        { name: 'S3', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Amazon-S3-Logo.svg/1712px-Amazon-S3-Logo.svg.png', framed: false },
       ],
     },
     {
