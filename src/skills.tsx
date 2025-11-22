@@ -73,7 +73,7 @@ const SkillsSection: React.FC = () => {
     {
       title: 'Miscellaneous',
       skills: [
-        { name: 'Debian Linux', icon: 'https://www.debian.org/Pics/debian-logo-1024x576.png', framed: false },
+        { name: 'Debian Linux', icon: 'https://free-astro.org/images/0/04/Debian_logo.png', framed: false },
         { name: 'RHEL', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Red_Hat_logo.svg/1280px-Red_Hat_logo.svg.png', framed: false },
         { name: 'Arch Linux', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Arch_Linux_%22Crystal%22_icon.svg/2048px-Arch_Linux_%22Crystal%22_icon.svg.png', framed: false },
         { name: 'Jenkins', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1483px-Jenkins_logo.svg.png', framed: false },
