@@ -5,8 +5,18 @@ const StatsSection: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [counts, setCounts] = useState([0, 0, 0, 0]);
   const animationStarted = useRef(false);
-  const NICK_BIRTH_YEAR = 1999;
-  const age = new Date().getFullYear() - NICK_BIRTH_YEAR;
+  const birthDate = new Date(1999, 0, 21); // months are 0-indexed (0 = January)
+  const today = new Date();
+
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const hasHadBirthdayThisYear =
+    today.getMonth() > birthDate.getMonth() ||
+    (today.getMonth() === birthDate.getMonth() &&
+      today.getDate() >= birthDate.getDate());
+
+  if (!hasHadBirthdayThisYear) {
+    age -= 1;
+  }
 
   const stats = [
     { value: age, label: 'Age' },
