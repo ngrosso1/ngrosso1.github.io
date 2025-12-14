@@ -20,28 +20,28 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'VFIOH',
-    description: 'VFIO, or Virtual Function I/O, IOMMU/device agnostic framework for exposing direct \
-    device access to userspace, in a secure, IOMMU protected environment. This terminal application \
-    helps install dependencies, configure instances, and run virt manager set ups for the KVM.',
+    description: `VFIO, or Virtual Function I/O, IOMMU/device agnostic framework for exposing direct 
+    device access to userspace, in a secure, IOMMU protected environment. This terminal application 
+    helps install dependencies, configure instances, and run virt manager set ups for the KVM.`,
     imageUrl: vfioh,
     techStack: ['Python', 'KVM', 'Bash', 'VFIO', 'Linux'],
     repoLink: 'https://github.com/ngrosso1/Single-GPU-passthrough',
   },
   {
     title: 'Task Manager',
-    description: 'Developed a full-stack task management application using React for frontend and a \
-    RESTful API in TypeScript for backend, enabling CRUD operations with seamless integration \
-    between client and server',
+    description: `Developed a full-stack task management application using React for frontend and a 
+    RESTful API in TypeScript for backend, enabling CRUD operations with seamless integration 
+    between client and server`,
     imageUrl: task,
     techStack: ['Typescript', 'AWS Lambda', 'REST API', 'React', 'DynamoDB', 'HTML/CSS'],
     repoLink: 'https://github.com/ngrosso1/taskManager'
   },
   {
     title: 'Wordle Recreation',
-    description: 'Recreated the popular word puzzle game Wordle using HTML, CSS, and JavaScript. \
-    Implemented core gameplay logic, animations, and keyboard interaction to closely mirror the \
-    original experience. Designed a responsive layout for smooth play across desktop and mobile \
-    browsers.',
+    description: `Recreated the popular word puzzle game Wordle using HTML, CSS, and JavaScript. 
+    Implemented core gameplay logic, animations, and keyboard interaction to closely mirror the 
+    original experience. Designed a responsive layout for smooth play across desktop and mobile 
+    browsers.`,
     imageUrl: wordle,
     techStack: ['JavaScript', 'NodeJS', 'HTML/CSS'],
     repoLink: 'https://github.com/ngrosso1/wordle_clone',
