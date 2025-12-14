@@ -18,14 +18,14 @@ const ProfileCard: React.FC = () => {
             <a href="https://drive.google.com/file/d/1za1qE7yvZeFML-o72zC62SIEohcrTPWu/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="button-wrapper">
               <button className="button-85">Resume</button>
             </a>
-            <a href="mailto:nicholasj.grosso@gmail.com">
-              <IoMail className="icon" />
-            </a>
             <a href="https://www.linkedin.com/in/nicholasjgrosso/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="icon" />
             </a>
             <a href="https://github.com/ngrosso1" target="_blank" rel="noopener noreferrer">
               <FaGithub className="icon" />
+            </a>
+            <a href="mailto:nicholasj.grosso@gmail.com">
+              <IoMail className="icon" />
             </a>
           </div>
           </div>
