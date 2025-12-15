@@ -52,10 +52,9 @@ const SkillsSection: React.FC = () => {
     {
       title: 'Data Analysis',
       skills: [
-        { name: 'MSSQL', icon: 'https://img.icons8.com/color/512/microsoft-sql-server.png', framed: false }, //OLD LOGO: https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-29.png
+        { name: 'MSSQL', icon: 'https://img.icons8.com/color/512/microsoft-sql-server.png', framed: false },
         { name: 'postgreSQL', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1163px-Postgresql_elephant.svg.png', framed: false },
         { name: 'MySQL', icon: 'https://pngimg.com/d/mysql_PNG23.png', framed: false },
-        //{ name: 'NoSQL', icon: 'https://cpl.thalesgroup.com/sites/default/files/inline-images/nosql%20databases.png', framed: false },
         { name: 'GraphQL', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png', framed: false },
         { name: 'MongoDB', icon: 'https://logo.svgcdn.com/devicon/mongodb-original.png', framed: false},
         { name: 'DynamoDB', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/DynamoDB.png', framed: false},

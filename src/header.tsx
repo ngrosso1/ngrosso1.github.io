@@ -83,15 +83,6 @@ const Header: React.FC = () => {
               {splitLetters('Home')}
             </a>
           </li>
-          {/*
-          TODO: NEED TO REUSE ASSET
-          old About section
-          <li>
-            <a href="/about" onClick={(e) => handleClick(e, '/about')}>
-              {splitLetters('About')}
-            </a>
-          </li>
-          */}
           <li>
             <a href="/projects" onClick={(e) => handleClick(e, '/projects')}>
               {splitLetters('Projects')}
