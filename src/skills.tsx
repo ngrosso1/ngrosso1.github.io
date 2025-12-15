@@ -52,8 +52,10 @@ const SkillsSection: React.FC = () => {
     {
       title: 'Data Analysis',
       skills: [
-        { name: 'SQL', icon: 'https://img.icons8.com/color/512/microsoft-sql-server.png', framed: false }, //OLD LOGO: https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-29.png
-        { name: 'NoSQL', icon: 'https://cpl.thalesgroup.com/sites/default/files/inline-images/nosql%20databases.png', framed: false },
+        { name: 'MSSQL', icon: 'https://img.icons8.com/color/512/microsoft-sql-server.png', framed: false }, //OLD LOGO: https://www.freeiconspng.com/thumbs/sql-server-icon-png/sql-server-icon-png-29.png
+        { name: 'postgreSQL', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1163px-Postgresql_elephant.svg.png', framed: false },
+        { name: 'MySQL', icon: 'https://pngimg.com/d/mysql_PNG23.png', framed: false },
+        //{ name: 'NoSQL', icon: 'https://cpl.thalesgroup.com/sites/default/files/inline-images/nosql%20databases.png', framed: false },
         { name: 'GraphQL', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png', framed: false },
         { name: 'MongoDB', icon: 'https://logo.svgcdn.com/devicon/mongodb-original.png', framed: false},
         { name: 'DynamoDB', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/DynamoDB.png', framed: false},
@@ -81,6 +83,8 @@ const SkillsSection: React.FC = () => {
         { name: 'Jenkins', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1483px-Jenkins_logo.svg.png', framed: false },
         { name: 'Git', icon: 'https://avatars.githubusercontent.com/u/18133?s=280&v=4', framed: false },
         { name: 'OSX', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png', framed: false },
+        { name: 'Jira', icon: 'https://images.icon-icons.com/3053/PNG/512/jira_cloud_macos_bigsur_icon_190051.png', framed: false },
+        { name: 'Confluence', icon: 'https://1000logos.net/wp-content/uploads/2025/02/Confluence-Emblem.png', framed: false },
       ],
     },
   ];
