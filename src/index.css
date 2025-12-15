@@ -40,13 +40,4 @@ header, .profile-card, .experience-tabs, .featured-projects {
   .App {
     padding: 10px;
   }
-
-  .wave {
-    height: 100px;
-    width: 3200px;
-  }
-
-  .ocean {
-    height: 3%;
-  }
 }
