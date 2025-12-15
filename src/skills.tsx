@@ -41,10 +41,11 @@ const SkillsSection: React.FC = () => {
         { name: 'GoLang', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/330px-Go_Logo_Blue.svg.png', framed: false },
         { name: 'Python', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png', framed: false },
         { name: 'C#', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1820px-Logo_C_sharp.svg.png', framed: false },
-        { name: 'Java', icon: 'https://cdn-icons-png.flaticon.com/512/226/226777.png', framed: false },
+        { name: '.NET', icon: 'https://cdn.prod.website-files.com/6047a9e35e5dc54ac86ddd90/63064f1fedf422395124660e_e7d03466.png', framed: false },
+        { name: 'Java', icon: 'https://static.vecteezy.com/system/resources/thumbnails/048/332/150/small_2x/java-programming-language-java-logo-free-png.png', framed: false },
         { name: 'Rust', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rustacean-orig-noshadow.svg/1200px-Rustacean-orig-noshadow.svg.png', framed: false },
         { name: 'Perl', icon: 'https://www.freelogovectors.net/wp-content/uploads/2021/02/perl_logo_freelogovectors.net_.png', framed: false },
-        { name: 'Swift', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968371.png', framed: false },
+        { name: 'Swift', icon: 'https://developer.apple.com/assets/elements/icons/swift/swift-128x128_2x.png', framed: false },
         { name: 'Bash', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/2048px-Bash_Logo_Colored.svg.png', framed: false },
       ],
     },
@@ -74,11 +75,12 @@ const SkillsSection: React.FC = () => {
     {
       title: 'Miscellaneous',
       skills: [
-        { name: 'Debian Linux', icon: 'https://free-astro.org/images/0/04/Debian_logo.png', framed: false },
+        { name: 'Debian', icon: 'https://free-astro.org/images/0/04/Debian_logo.png', framed: false },
         { name: 'RHEL', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Red_Hat_logo.svg/1280px-Red_Hat_logo.svg.png', framed: false },
         { name: 'Arch Linux', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Arch_Linux_%22Crystal%22_icon.svg/2048px-Arch_Linux_%22Crystal%22_icon.svg.png', framed: false },
         { name: 'Jenkins', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1483px-Jenkins_logo.svg.png', framed: false },
         { name: 'Git', icon: 'https://avatars.githubusercontent.com/u/18133?s=280&v=4', framed: false },
+        { name: 'OSX', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png', framed: false },
       ],
     },
   ];

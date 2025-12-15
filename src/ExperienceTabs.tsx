@@ -8,7 +8,7 @@ const workExperience = [
     company: "Lumen Technologies",
     role: "Software Engineer II",
     overview: "Led development and maintenance of Vyvx Broadcast Solutions, a global platform supporting live and linear media delivery. Took primary ownership of critical systems including Harvester, a Golang-based network monitoring service, and Atlas, an automated equipment reservation management system.",
-    technologies: ["C++", "Go", "JavaScript", "C#", "Python", "SQL", "Perl", "Docker", "Kubernetes", "Rancher", "PowerBuilder", "ASP.NET"],
+    technologies: ["C++", "Go", "JavaScript", "C#", "Python", "SQL", ".NET", "Perl", "Docker", "Kubernetes", "Rancher", "PowerBuilder", "ASP.NET"],
     achievements: [
       "Engineered broadcast encoding and resilient media transport systems increasing reliability and scalability",
       "Primary maintainer of Harvester for SNMP traps, equipment queries, and customer notifications; resolved complex production issues and managed Docker-based development environments",
