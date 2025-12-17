@@ -1,6 +1,8 @@
 // skills.tsx
 import React from 'react';
 import './skills.css';
+import java from './logos/java.png';
+import swift from './logos/swift.png';
 
 interface Skill {
   name: string;
@@ -42,10 +44,10 @@ const SkillsSection: React.FC = () => {
         { name: 'Python', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png', framed: false },
         { name: 'C#', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1820px-Logo_C_sharp.svg.png', framed: false },
         { name: '.NET', icon: 'https://cdn.prod.website-files.com/6047a9e35e5dc54ac86ddd90/63064f1fedf422395124660e_e7d03466.png', framed: false },
-        { name: 'Java', icon: 'https://static.vecteezy.com/system/resources/thumbnails/048/332/150/small_2x/java-programming-language-java-logo-free-png.png', framed: false },
+        { name: 'Java', icon: java, framed: false },
         { name: 'Rust', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rustacean-orig-noshadow.svg/1200px-Rustacean-orig-noshadow.svg.png', framed: false },
         { name: 'Perl', icon: 'https://www.freelogovectors.net/wp-content/uploads/2021/02/perl_logo_freelogovectors.net_.png', framed: false },
-        { name: 'Swift', icon: 'https://developer.apple.com/assets/elements/icons/swift/swift-128x128_2x.png', framed: false },
+        { name: 'Swift', icon: swift, framed: false },
         { name: 'Bash', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/2048px-Bash_Logo_Colored.svg.png', framed: false },
       ],
     },
