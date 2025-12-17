@@ -128,16 +128,18 @@ const StatsSection: React.FC = () => {
           color: rgba(255, 255, 255, 0.7);
           font-family: monospace;
           line-height: 1.3;
-          max-width: 80px;
+          max-width: 100px;
           margin: 0;
           text-align: left;
-          word-wrap: break-word;
+          overflow-wrap: break-word;
+          word-break: keep-all; /* Prevents breaking within words */
+          hyphens: auto; /* Adds hyphens where needed (optional) */
         }
 
         @media (min-width: 768px) {
           .stats-grid {
             gap: 2rem;
-            max-width: 700px;
+            max-width: 130px;
           }
 
           .stat-number {
@@ -146,7 +148,7 @@ const StatsSection: React.FC = () => {
 
           .stat-label {
             font-size: 0.75rem;
-            max-width: 100px;
+            max-width: 130px;
           }
         }
 
