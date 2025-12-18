@@ -21,9 +21,9 @@ const projects: Project[] = [
   {
     title: 'VFIOH',
     description: [
-      'VFIO (Virtual Function I/O) enables secure, IOMMU-protected passthrough of physical devices—such as GPUs—directly to virtual machines, but configuring single-GPU passthrough on Linux is complex and error-prone.',
-      'VFIOH is a terminal-based utility that automates the setup of KVM virtual machines with NVIDIA GPU passthrough. It handles dependency installation, VFIO hook configuration, kernel and initramfs updates, and virt-manager VM provisioning, while performing system checks to detect common driver and binding issues.',
-      'When automated checks fail, VFIOH provides an opt-in, AI-assisted troubleshooting workflow that analyzes kernel and libvirt logs using local LLM inference to diagnose failures and recommend safe, user-approved fixes. AI recommendations are constrained to predefined actions to preserve system safety, with optional containerized execution for reproducible analysis.'
+      'VFIO (Virtual Function I/O) enables secure, IOMMU protected passthrough of physical devices—such as GPUs—directly to virtual machines, but configuring single GPU passthrough on Linux is complex and error prone.',
+      'VFIOH is a TUI (Text based User Interface) that automates the setup of KVM virtual machines with NVIDIA GPU passthrough. It handles dependency installation, VFIO hook configuration, kernel and initramfs updates, and virt manager VM provisioning, while performing system checks to detect common driver and binding issues.',
+      'When automated checks fail, VFIOH provides an opt-in, AI assisted troubleshooting workflow that analyzes kernel and libvirt logs using local LLM inference to diagnose failures and recommend safe, user approved fixes. AI recommendations are constrained to predefined actions to preserve system safety, with optional containerized execution for reproducible analysis.'
     ],
     imageUrl: vfioh,
     techStack: ['Python', 'KVM', 'Ollama', 'LLM', 'AI', 'VFIO', 'Linux'],
@@ -31,10 +31,7 @@ const projects: Project[] = [
   },
   {
     title: 'Task Manager',
-    description: [
-      'Developed a full-stack task management application using React for the frontend and a RESTful API in TypeScript for the backend.',
-      'Implemented full CRUD functionality with seamless client–server integration and cloud-based deployment.'
-    ],
+    description: ['Developed a task management application featuring a React frontend and a TypeScript based RESTful API backend. Implemented full CRUD functionality for tasks, including creation, editing, deletion, and filtering. Ensured smooth client server communication, applied robust state management, and designed responsive UI/UX for an intuitive user experience. Leveraged modern development practices including component based architecture, modular code structure, and asynchronous API handling to create a scalable and maintainable application.'],
     imageUrl: task,
     techStack: ['Typescript', 'AWS Lambda', 'REST API', 'React', 'DynamoDB', 'HTML/CSS'],
     repoLink: 'https://github.com/ngrosso1/taskManager'

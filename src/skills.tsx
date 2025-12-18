@@ -1,8 +1,6 @@
 // skills.tsx
 import React from 'react';
 import './skills.css';
-import java from './logos/java.png';
-import swift from './logos/swift.png';
 
 interface Skill {
   name: string;

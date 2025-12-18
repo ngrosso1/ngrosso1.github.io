@@ -298,13 +298,13 @@ h1 {
   height: 1.15em;
   line-height: 1;
   vertical-align: middle;
-  transform-origin: 70% 70%; /* better pivot for waving hand */
+  transform-origin: 70% 70%;
   will-change: transform;
   backface-visibility: hidden;
   font-size: 1.6rem;
   box-sizing: content-box;
   padding: 0;
-  animation: wave-rotate 2s infinite; /* <-- add this line */
+  animation: wave-rotate 2s infinite;
 }
 
 
