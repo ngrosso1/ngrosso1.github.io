@@ -19,7 +19,7 @@ const projects: Project[] = [
   {
     title: 'VFIOH',
     description: [
-      'VFIO (Virtual Function I/O) enables secure, IOMMU protected passthrough of physical devices—such as GPUs directly to virtual machines, but configuring single GPU passthrough on Linux is complex and error prone.',
+      'VFIO (Virtual Function I/O) enables secure, IOMMU protected passthrough of physical devices such as GPUs directly to virtual machines, but configuring single GPU passthrough on Linux is complex and error prone.',
       'VFIOH is a TUI (Text based User Interface) that automates the setup of KVM virtual machines with NVIDIA GPU passthrough. It handles dependency installation, VFIO hook configuration, kernel and initramfs updates, and virt manager VM provisioning, while performing system checks to detect common driver and binding issues.',
       'When automated checks fail, VFIOH provides an opt-in, AI assisted troubleshooting workflow that analyzes kernel and libvirt logs using local LLM inference to diagnose failures and recommend safe, user approved fixes. AI recommendations are constrained to predefined actions to preserve system safety, with optional containerized execution for reproducible analysis.'
     ],
@@ -44,7 +44,8 @@ const projects: Project[] = [
     ],
     imageUrl: wordle,
     techStack: ['Javascript', 'NodeJS', 'HTML/CSS'],
-    repoLink: 'https://github.com/ngrosso1/wordle_clone'
+    repoLink: 'https://github.com/ngrosso1/wordle_clone',
+    liveLink: 'https://ngrosso1.github.io/wordle_clone/'
   },
 ];
 
