@@ -290,6 +290,43 @@ h1 {
 @media (max-width: 768px) { .social-section { gap: 6px; margin-top: 8px; } }
 @media (max-width: 480px) { .social-section { gap: 4px; margin-top: 6px; } }
 
+.wave {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15em;
+  height: 1.15em;
+  line-height: 1;
+  vertical-align: middle;
+  transform-origin: 70% 70%; /* better pivot for waving hand */
+  will-change: transform;
+  backface-visibility: hidden;
+  font-size: 1.6rem;
+  box-sizing: content-box;
+  padding: 0;
+  animation: wave-rotate 2s infinite; /* <-- add this line */
+}
+
+
+@media (max-width: 768px) {
+  .wave { font-size: 1em !important; width: 1em; height: 1em; }
+}
+
+@media (max-width: 480px) {
+  .wave { font-size: 1.05em !important; width: 1em; height: 1em; }
+}
+
+@keyframes wave-rotate {
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(14deg); }
+  20%  { transform: rotate(-8deg); }
+  30%  { transform: rotate(14deg); }
+  40%  { transform: rotate(-4deg); }
+  50%  { transform: rotate(10deg); }
+  60%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
 .nameHeader {
   white-space: nowrap;
   display: inline-flex;
