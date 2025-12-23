@@ -63,7 +63,7 @@ const educationList = [
 
 const certificatesList = [
   {
-    date: "April 2024",
+    date: "April 2022",
     name: "Data Analytics Professional Certificate",
     organization: "Google",
     credentialId: "GHUXJ74KLNS3",
