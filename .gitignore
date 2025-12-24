@@ -4,3 +4,4 @@ build/
 *.map
 *.log
 .vscode
+/src/.env
