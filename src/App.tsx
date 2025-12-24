@@ -14,8 +14,8 @@ import Skills from './skills';
 
 // Initialize Supabase client
 // Replace these with your actual Supabase project credentials
-const supabaseUrl = 'SUPABASE_URL'; // e.g., https://xxxxx.supabase.co
-const supabaseAnonKey = 'SUPABASE_ANON_KEY';
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || ''; // e.g., https://xxxxx.supabase.co
+const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // Helper function to detect device type
