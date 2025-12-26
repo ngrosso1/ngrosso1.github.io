@@ -1,5 +1,5 @@
 // Experience
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './ExperienceTabs.css';
 import esurgiLogo from './logos/esurgi.png';
 
@@ -10,7 +10,7 @@ const workExperience = [
     role: "Software Engineer II",
     overview: `Vyvx Broadcast Solutions is a global platform supporting live and linear media delivery across production broadcast networks. I worked on backend systems that interface directly with physical broadcast equipment, where reliability, timing, and observability are critical. My role focused on building and maintaining services that support real-time monitoring, automated equipment orchestration, and resilient media transport in production environments.
 I took primary ownership of two core systems: Harvester, a Golang-based network monitoring and alerting service, and Atlas, an automated equipment reservation platform. My work involved diagnosing complex production issues spanning software, networking, and hardware, evolving these systems to be more reliable and scalable, and ensuring they aligned with real-world operational workflows. Development and testing were performed in Docker-based environments closely mirroring production infrastructure.`,
-    technologies: ["C++", "Go", "JavaScript", "Angular", "C#", ".NET", "Python", "SQL", "Java", "Perl", "Docker", "Kubernetes", "Rancher", "Bash", "Jenkins", "Terraform", "AWS", "Git", "PowerBuilder", "Jira", "Gitlab"],
+    technologies: ["C++", "Go", "JavaScript", "Angular", "C#", ".NET", "Python", "SQL", "Java", "Perl", "Docker", "Kubernetes", "Rancher", "Bash", "Jenkins", "Terraform", "AWS", "Git", "PowerBuilder", "Elasticsearch","Jira", "Gitlab"],
     achievements: [
       "Owned and maintained Harvester, a Golang service processing SNMP traps, equipment telemetry, and customer notifications for real-time network monitoring",
       "Debugged and resolved complex production incidents involving broadcast equipment, network behavior, and timing-sensitive failures",
