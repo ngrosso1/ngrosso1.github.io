@@ -1,3 +1,4 @@
+// StatsSection.tsx
 import React, { useState, useEffect, useRef } from 'react';
 
 const StatsSection: React.FC = () => {
