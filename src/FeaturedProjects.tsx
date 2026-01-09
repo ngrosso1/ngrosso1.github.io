@@ -24,7 +24,7 @@ const projects: Project[] = [
       'When automated checks fail, VFIOH provides an opt-in, AI assisted troubleshooting workflow that analyzes kernel and libvirt logs using local LLM inference to diagnose failures and recommend safe, user approved fixes. AI recommendations are constrained to predefined actions to preserve system safety, with optional containerized execution for reproducible analysis.'
     ],
     imageUrl: vfioh,
-    techStack: ['Python', 'KVM', 'Ollama', 'LLM', 'AI', 'VFIO', 'Linux'],
+    techStack: ['Python', 'KVM', 'Ollama', 'Docker', 'LLM', 'AI', 'VFIO', 'Linux'],
     repoLink: 'https://github.com/ngrosso1/Single-GPU-passthrough',
   },
   {
@@ -33,17 +33,17 @@ const projects: Project[] = [
       'Developed a task management application featuring a React frontend and a TypeScript based RESTful API backend. Implemented full CRUD functionality for tasks, including creation, editing, deletion, and filtering. Ensured smooth client server communication, applied robust state management, and designed responsive UI/UX for an intuitive user experience. Leveraged modern development practices including component based architecture, modular code structure, and asynchronous API handling to create a scalable and maintainable application.'
     ],
     imageUrl: task,
-    techStack: ['Typescript', 'AWS Lambda', 'REST API', 'React', 'DynamoDB', 'HTML/CSS'],
+    techStack: ['Typescript', 'AWS Lambda', 'REST API', 'React', 'DynamoDB', 'HTML5/CSS'],
     repoLink: 'https://github.com/ngrosso1/taskManager'
   },
   {
     title: 'Wordle Recreation',
     description: [
-      'Recreated the popular word puzzle game Wordle using HTML, CSS, and JavaScript.',
+      'Recreated the popular word puzzle game Wordle using HTML5, CSS, and JavaScript.',
       'Implemented core gameplay logic, animations, and keyboard interaction to closely mirror the original experience, with a responsive layout for desktop and mobile browsers.'
     ],
     imageUrl: wordle,
-    techStack: ['Javascript', 'NodeJS', 'HTML/CSS'],
+    techStack: ['Javascript', 'NodeJS', 'HTML5/CSS'],
     repoLink: 'https://github.com/ngrosso1/wordle_clone',
     liveLink: 'https://ngrosso1.github.io/wordle_clone/'
   },
