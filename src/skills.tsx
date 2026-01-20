@@ -29,10 +29,9 @@ const SkillsSection: React.FC = () => {
         { name: 'TypeScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png', framed: false },
         { name: 'JavaScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', framed: false },
         { name: 'Angular', icon: 'https://images.seeklogo.com/logo-png/33/2/angular-logo-png_seeklogo-331629.png', framed: false },
-        { name: 'NodeJS', icon: 'https://images.icon-icons.com/2699/PNG/512/nodejs_logo_icon_169910.png', framed: false },
         { name: 'React', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png', framed: false },
         { name: 'Next.js', icon: 'https://marcbruederlin.gallerycdn.vsassets.io/extensions/marcbruederlin/next-icons/0.1.0/1723747598319/Microsoft.VisualStudio.Services.Icons.Default', framed: false },
-        { name: 'HTML/CSS', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/2560px-CSS3_and_HTML5_logos_and_wordmarks.svg.png', framed: false },
+        { name: 'HTML5/CSS', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/2560px-CSS3_and_HTML5_logos_and_wordmarks.svg.png', framed: false },
       ],
     },
     {
@@ -47,6 +46,7 @@ const SkillsSection: React.FC = () => {
         { name: 'Rust', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rustacean-orig-noshadow.svg/1200px-Rustacean-orig-noshadow.svg.png', framed: false },
         { name: 'Perl', icon: 'https://www.freelogovectors.net/wp-content/uploads/2021/02/perl_logo_freelogovectors.net_.png', framed: false },
         { name: 'Swift', icon: 'https://developer.apple.com/assets/elements/icons/swift/swift-128x128_2x.png', framed: false },
+        { name: 'NodeJS', icon: 'https://images.icon-icons.com/2699/PNG/512/nodejs_logo_icon_169910.png', framed: false },
         { name: 'Bash', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/2048px-Bash_Logo_Colored.svg.png', framed: false },
       ],
     },
@@ -85,6 +85,7 @@ const SkillsSection: React.FC = () => {
         { name: 'OSX', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/c9/Finder_Icon_macOS_Big_Sur.png', framed: false },
         { name: 'Jira', icon: 'https://images.icon-icons.com/3053/PNG/512/jira_cloud_macos_bigsur_icon_190051.png', framed: false },
         { name: 'Confluence', icon: 'https://1000logos.net/wp-content/uploads/2025/02/Confluence-Emblem.png', framed: false },
+        { name: 'VSCode', icon: 'https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxj7kCzMIlSC20SNjaJf9GmG15ocnF.zbBRgxMSlB7Ejh6FbgNzxLvZOoW7N3ML56fn3m5Z4MO.M8pYrCFVKIhqM-&format=source', framed: false },
       ],
     },
   ];
