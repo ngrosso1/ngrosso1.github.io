@@ -67,11 +67,13 @@ const SkillsSection: React.FC = () => {
       skills: [
         { name: 'AWS', icon: 'https://www.pngmart.com/files/23/Aws-Logo-PNG-Picture.png', framed: false },
         { name: 'GCP', icon: 'https://img.icons8.com/color/512/google-cloud.png', framed: false },
+        { name: 'Azure', icon: 'https://play-lh.googleusercontent.com/TckA-A_COVAujJtzvpgGhwVkkYCBEDbZe-GLaA9kVbZra1Vcoy7oPXCUG3y0GP2AZg', framed: false },
         { name: 'Terraform', icon: 'https://blogs.vmware.com/cloudprovider/wp-content/uploads/sites/78/2019/04/og-image-8b3e4f7d-blog-aspect-ratio.png?w=576&h=324&crop=1', framed: false },
         { name: 'Kubernetes', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/00/Kubernetes_%28container_engine%29.png', framed: false },
         { name: 'Docker', icon: 'https://i0.wp.com/blog.kmsigma.com/wp-content/uploads/2025/07/docker-mark-blue-scaled.png?fit=2560%2C2021&ssl=1', framed: false },
         { name: 'Redshift', icon: 'https://zappysys.com/blog/wp-content/uploads/2019/08/amazon-redshift-logo.png', framed: false },
         { name: 'S3', icon: 'https://cdn-blog.lawrencemcdaniel.com/wp-content/uploads/2021/01/30083957/aws-s3-logo.png', framed: false },
+        { name: 'BigQuery', icon: 'https://data.world/api/datadotworld-apps/dataset/bigquery/file/raw/logo.png', framed: false },
       ],
     },
     {
