@@ -6,6 +6,7 @@ import wordle from "./logos/wordleclone.gif";
 import task from "./logos/task.gif";
 import insta from "./logos/insta.gif";
 import vfioh from "./logos/vfioh.gif";
+import recDash from "./logos/RecDash.gif";
 
 interface Project {
   title: string;
@@ -67,6 +68,15 @@ const projects: Project[] = [
     imageUrl: c4,
     techStack: ['Python'],
     repoLink: 'https://github.com/ngrosso1/ConnectFourAlgorithm',
+  },
+  {
+    title: 'Recidivism Trends Dashboard',
+    description: [
+      'Created an R Shiny incident analysis dashboard simulating use‑of‑force data visualization needs, enabling stakeholders to filter by facility and demographic variables while reducing manual reporting time by an estimated 20% through automated PDF report generation and interactive plotly visualizations.',
+    ],
+    imageUrl: recDash,
+    techStack: ['R (Shiny, tidyverse, plotly, DT)'],
+    repoLink: 'https://github.com/ngrosso1/Recidivism-Dashboard',
   }
 ];
 

@@ -1,7 +1,7 @@
 // src/App.tsx
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { createClient } from '@supabase/supabase-js';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import ProfileCard from './ProfileCard';
 import ExperienceTabs from './ExperienceTabs';
 import Header from './header';
@@ -12,11 +12,21 @@ import SwirlBackground from './bubbleBackground';
 import StatsSection from './StatsSection';
 import Skills from './skills';
 
-// Initialize Supabase client
-// Replace these with your actual Supabase project credentials
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || ''; // e.g., https://xxxxx.supabase.co
-const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Initialize Supabase client (safely)
+// These must be defined in your environment as REACT_APP_SUPABASE_URL and REACT_APP_SUPABASE_ANON_KEY
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
+
+let supabase: SupabaseClient | null = null;
+
+if (supabaseUrl && supabaseAnonKey) {
+  supabase = createClient(supabaseUrl, supabaseAnonKey);
+} else {
+  console.warn(
+    'Supabase env vars are not set. Visitor analytics are disabled. ' +
+      'Set REACT_APP_SUPABASE_URL and REACT_APP_SUPABASE_ANON_KEY in your environment to enable them.'
+  );
+}
 
 // Helper function to detect device type
 const getDeviceType = (): string => {
@@ -85,6 +95,11 @@ const App: React.FC = () => {
   useEffect(() => {
     const trackUniqueVisitor = async () => {
       try {
+        // If Supabase isn't configured, skip tracking but keep the app rendering
+        if (!supabase) {
+          return;
+        }
+
         // Check if this browser has visited before
         const hasVisited = localStorage.getItem('portfolio_visited');
         const visitorId = localStorage.getItem('portfolio_visitor_id') || 
@@ -170,6 +185,11 @@ const App: React.FC = () => {
 
     // Console command: Get total visitor count
     (window as any).getVisitorCount = async () => {
+      if (!supabase) {
+        console.warn('Supabase is not configured. getVisitorCount is disabled.');
+        return 0;
+      }
+
       try {
         const { count, error } = await supabase
           .from('visitors')
@@ -187,6 +207,11 @@ const App: React.FC = () => {
 
     // Console command: Get geographic breakdown
     (window as any).getGeography = async () => {
+      if (!supabase) {
+        console.warn('Supabase is not configured. getGeography is disabled.');
+        return;
+      }
+
       try {
         const { data, error } = await supabase
           .from('visitor_geography')
@@ -211,6 +236,11 @@ const App: React.FC = () => {
 
     // Console command: Get device breakdown
     (window as any).getDeviceStats = async () => {
+      if (!supabase) {
+        console.warn('Supabase is not configured. getDeviceStats is disabled.');
+        return;
+      }
+
       try {
         const { data, error } = await supabase
           .from('visitor_devices')
@@ -227,6 +257,11 @@ const App: React.FC = () => {
 
     // Console command: Get recent visitors
     (window as any).getRecentVisitors = async (limit = 10) => {
+      if (!supabase) {
+        console.warn('Supabase is not configured. getRecentVisitors is disabled.');
+        return [];
+      }
+
       try {
         const { data, error } = await supabase
           .from('visitors')
