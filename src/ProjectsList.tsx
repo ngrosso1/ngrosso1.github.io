@@ -7,6 +7,7 @@ import task from "./logos/task.gif";
 import insta from "./logos/insta.gif";
 import vfioh from "./logos/vfioh.gif";
 import recDash from "./logos/RecDash.gif";
+import wfm from "./logos/wfmPic.png";
 
 interface Project {
   title: string;
@@ -29,6 +30,25 @@ const projects: Project[] = [
     imageUrl: vfioh,
     techStack: ['Python', 'KVM', 'Ollama', 'Docker', 'LLM', 'AI', 'VFIO', 'Linux'],
     repoLink: 'https://github.com/ngrosso1/Single-GPU-passthrough',
+  },
+  {
+    title: 'Recidivism Trends Dashboard',
+    description: [
+      'Created an R Shiny incident analysis dashboard simulating use‑of‑force data visualization needs, enabling stakeholders to filter by facility and demographic variables while reducing manual reporting time by an estimated 20% through automated PDF report generation and interactive plotly visualizations.',
+    ],
+    imageUrl: recDash,
+    techStack: ['R (Shiny, tidyverse, plotly, DT)'],
+    repoLink: 'https://github.com/ngrosso1/Recidivism-Dashboard',
+  },
+  {
+    title: 'WorkFlowManager',
+    description: [
+      'A console based workflow management application built with C# and SQL Server, demonstrating enterprise-level software development practices and clean architecture principles. The application provides comprehensive task tracking with automated audit logging, optimized database queries, and robust error handling throughout all layers of the system.',
+      'Key features include complete CRUD operations for task management, category based organization, automatic tracking of overdue and pending tasks, and comprehensive unit testing with XUnit. The system demonstrates best practices in input validation, exception handling, and defensive programming techniques essential for production-grade applications.'
+    ],
+    imageUrl: wfm,
+    techStack: ['C# (.NET 8.0), T-SQL, PowerShell, SQL Server, XUnit'],
+    repoLink: 'https://github.com/ngrosso1/WorkFlowManager',
   },
   {
     title: 'Task Manager',
@@ -68,15 +88,6 @@ const projects: Project[] = [
     imageUrl: c4,
     techStack: ['Python'],
     repoLink: 'https://github.com/ngrosso1/ConnectFourAlgorithm',
-  },
-  {
-    title: 'Recidivism Trends Dashboard',
-    description: [
-      'Created an R Shiny incident analysis dashboard simulating use‑of‑force data visualization needs, enabling stakeholders to filter by facility and demographic variables while reducing manual reporting time by an estimated 20% through automated PDF report generation and interactive plotly visualizations.',
-    ],
-    imageUrl: recDash,
-    techStack: ['R (Shiny, tidyverse, plotly, DT)'],
-    repoLink: 'https://github.com/ngrosso1/Recidivism-Dashboard',
   }
 ];
 
