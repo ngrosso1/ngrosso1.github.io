@@ -15,7 +15,7 @@ const ProfileCard: React.FC = () => {
             Fullstack Software Engineer | IT Specialist
           </p>
           <div className="social-section">
-            <a href="https://drive.google.com/file/d/1Ym_dSud8KKDK37jj9c_PFyHv8u67iEUz/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="button-wrapper">
+            <a href="https://drive.google.com/file/d/1dl5UfVlA36W7KMz3U1y71jCTETHsvDLq/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="button-wrapper">
               <button className="button-85">Resume</button>
             </a>
             <a href="https://www.linkedin.com/in/nicholasjgrosso/" target="_blank" rel="noopener noreferrer">
