@@ -26,7 +26,7 @@ const SkillsSection: React.FC = () => {
     {
       title: 'Front End',
       skills: [
-        { name: 'TypeScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png', framed: false },
+        { name: 'TypeScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/250px-Typescript.svg.png', framed: false },
         { name: 'JavaScript', icon: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', framed: false },
         { name: 'Angular', icon: 'https://images.seeklogo.com/logo-png/33/2/angular-logo-png_seeklogo-331629.png', framed: false },
         { name: 'React', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png', framed: false },
@@ -67,7 +67,7 @@ const SkillsSection: React.FC = () => {
       skills: [
         { name: 'AWS', icon: 'https://www.pngmart.com/files/23/Aws-Logo-PNG-Picture.png', framed: false },
         { name: 'GCP', icon: 'https://img.icons8.com/color/512/google-cloud.png', framed: false },
-        { name: 'Azure', icon: 'https://play-lh.googleusercontent.com/TckA-A_COVAujJtzvpgGhwVkkYCBEDbZe-GLaA9kVbZra1Vcoy7oPXCUG3y0GP2AZg', framed: false },
+        { name: 'Azure', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1280px-Microsoft_Azure.svg.png', framed: false },
         { name: 'Terraform', icon: 'https://blogs.vmware.com/cloudprovider/wp-content/uploads/sites/78/2019/04/og-image-8b3e4f7d-blog-aspect-ratio.png?w=576&h=324&crop=1', framed: false },
         { name: 'Kubernetes', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/00/Kubernetes_%28container_engine%29.png', framed: false },
         { name: 'Docker', icon: 'https://i0.wp.com/blog.kmsigma.com/wp-content/uploads/2025/07/docker-mark-blue-scaled.png?fit=2560%2C2021&ssl=1', framed: false },
